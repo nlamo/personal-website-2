@@ -1,0 +1,396 @@
+/***************/
+/** UTILITIES **/
+/***************/
+
+// These have to be at the top of the scope because of the mixins
+
+@mixin grid-5-col-4-row {
+   display: grid;
+   grid-template-columns: repeat(5, 1fr);
+   grid-template-rows: repeat(4, 1fr);
+   grid-column-gap: 2rem;
+   grid-row-gap: 1rem;
+   align-items: center;
+   justify-items: center;
+   height: auto;
+   padding: 3rem;
+   margin: 3rem;
+   border: 1px solid black;
+}
+
+@mixin grid-3-col-2-row {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   grid-template-rows: repeat(2, 1fr);
+   grid-column-gap: 2rem;
+   grid-row-gap: 1rem;
+   align-items: center;
+   justify-items: center;
+   height: auto;
+   padding: 3rem;
+   margin: 3rem;
+   border: 1px solid black;
+}
+
+@mixin grid-3-col-1-row {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   grid-template-rows: 1fr;
+   grid-column-gap: 2rem;
+   grid-row-gap: 1rem;
+   align-items: center;
+   justify-items: center;
+   height: auto;
+   padding: 3rem;
+   margin: 3rem;
+   border: 1px solid black;
+}
+
+@mixin grid-3-row-1-column {
+   display: grid;
+   grid-template-columns: 1fr;
+   grid-template-rows: repeat(3, 1fr);
+   grid-column-gap: 0px;
+   grid-row-gap: 0px;
+}
+
+@mixin grid-single {
+   display: grid;
+   grid-template-columns: 1fr;
+   grid-template-rows: 1fr;
+   grid-column-gap: 0px;
+   grid-row-gap: 0px;
+   align-items: center;
+   justify-items: center;
+   height: auto;
+   padding: 3rem;
+   margin: 3rem;
+   border: 1px solid black;
+}
+
+/*****************/
+/** VUE CLASSES **/
+/*****************/
+
+.backgroundLightBlue {
+   background-color: #f0f8ff;
+
+   header, section, footer {
+      background-color: #fff;
+   }
+
+}
+
+.backgroundBlue {
+   background-color: #192B3C;
+}
+
+.headerDark {
+   background-color: #47586b;
+   color: #fff;
+}
+
+.navLight {
+   background-color: #fff;
+
+   ul li a {
+      background-color: #fff;
+
+      &:link {
+         color: #000;
+      }
+      
+      &:visited {
+         color: #000;
+      }
+
+   }
+}
+
+.navDark {
+   background-color: #47586b;
+
+   ul li a {
+      background-color: #47586b;
+
+      &:link {
+         color: #fff;
+      }
+      
+      &:visited {
+         color: #fff;
+      }
+
+   }
+}
+
+.sectionDark {
+   background-color: #47586b;
+   color: #fff;
+
+   div {
+      background-color: #fff;
+      color: #000;
+   }
+}
+
+.footerLight {
+   flex: 1 0 auto;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   overflow: auto;
+
+   a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px 0px 10px 0px;
+
+      img {
+         width: 40%;
+
+         &[src="img/linkedin_logo.png"] {
+            border-radius: 3px;
+
+            &:hover {
+               filter: brightness(105%);
+               border-radius: 3px;
+            }
+         }
+
+         &[src="img/github_logo.png"] {
+            border-radius: 1rem;
+
+            &:hover {
+               border-radius: 1rem;
+            }
+         }
+      }
+   }
+}
+
+.footerDark {
+   background-color:#47586b;
+
+   img { 
+      background: rgb(255,255,255);
+      background: radial-gradient(circle, rgba(255,255,255,1) 62%, rgba(71,88,107,1) 75%);
+
+      &[src="img/github_logo.png"] {
+         border-radius: 1rem;
+
+         &:hover {
+            filter: opacity(.85) brightness(110%);
+            border-radius: 1rem;
+         }
+      }
+   }
+}
+
+.formDark {
+   background-color:#47586b;
+   color: #fff;
+}
+
+/*****************/
+/* MAIN SECTIONS */
+/*****************/
+
+* {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+   font-family: "Karla", sans-serif;
+}
+
+button {
+   cursor: pointer;
+   padding: 10px;
+   font-size: 2vh;
+   color: #fff;
+}
+
+// Entire body overflow is hidden, we set the scroll for the content with 'overflow-y'
+body {
+   overflow: hidden;
+}
+
+header {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   height: 5rem;
+   border: 1px solid black;
+   margin-bottom: 4rem;
+   font-weight: 900;
+   font-size: 2rem;
+   text-align: center;
+   margin: 2rem 3rem 3rem 3rem;
+}
+
+// Main parent content, two columns for the whole page
+.grid-2-col {
+   display: grid;
+   height: 100vh;
+   width: 100vw;
+   grid-template-columns: 0.12fr 1fr;
+   grid-template-rows: 1fr;
+   grid-column-gap: 0px;
+   grid-row-gap: 0px;
+
+   .dark-mode {
+      margin-top: 2rem;
+   }
+   
+   // Nevigation bar (left column)
+   nav {
+      @include grid-3-row-1-column;
+
+      grid-template-rows: .1fr 1fr .1fr;
+      border: 1px solid black;
+      border-top: none;
+      border-bottom: none;
+      align-items: center;
+      justify-items: center;
+
+      ul {
+         list-style: none;
+         line-height: 8vh;
+         font-size: 2vh;
+
+         li {
+            background-color: #fff;
+
+            a {
+               display: block;
+               padding: 0.5rem 1rem;
+               text-decoration: none;
+
+               :link {
+                  color: black;
+               }
+
+               :visited {
+                  color: black;
+               }
+            }
+         }
+      }
+   }
+
+   // Primary content (right column)
+   main {
+      overflow-y: scroll;
+   }
+}
+
+.images {
+   @include grid-3-col-1-row;
+
+   * {
+      padding: 1rem;
+      margin: 0.5rem;
+   }
+
+   .div1 {
+      border: 1px solid black;
+      width: 6rem;
+      text-align: center;
+   }
+
+   .div2 {
+      border: 1px solid black;
+      width: 6rem;
+      text-align: center;
+   }
+
+   .div3 {
+      border: 1px solid black;
+      width: 6rem;
+      text-align: center;
+   }
+}
+
+.overview-1 {
+   @include grid-3-col-1-row;
+}
+
+.overview-2 {
+   @include grid-single;
+}
+
+.projects {
+   @include grid-single;
+}
+
+.concern {
+   @include grid-single;
+}
+
+.optimism {
+   @include grid-single;
+}
+
+.contact {
+   @include grid-single;
+
+   padding: 1rem; // override padding in grid-single
+}
+
+/****************/
+/* CONTACT FORM */
+/****************/
+
+.form-container {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   margin: 2rem;
+
+   form {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      width: 40rem;
+      font-size: 1rem;
+   }
+
+   label {
+      margin-bottom: 1rem;
+   }
+
+   input {
+      width: 100%;
+      padding: 0.3rem;
+      margin-bottom: 1rem;
+      font-family: "Montserrat", sans-serif;
+   }
+
+   textarea {
+      width: 100%;
+      height: 140px;
+      padding: 0.3rem;
+      margin-bottom: 1rem;
+      font-family: "Montserrat", sans-serif;
+   }
+
+   button {
+      width: 100%;
+      height: 3rem;
+      align-self: center;
+      font-family: "Sen", sans-serif;
+      font-size: 1rem;
+      color: #000;
+   }
+}
+
+footer {
+   display: grid;
+   align-items: center;
+   justify-items: center;
+   border: 1px solid black;
+   padding: 3rem;
+   margin: 3rem;
+}
+

@@ -1,0 +1,358 @@
+/***************/
+/** UTILITIES **/
+/***************/
+/*****************/
+/** VUE CLASSES **/
+/*****************/
+.backgroundLightBlue {
+  background-color: #f0f8ff;
+}
+.backgroundLightBlue header, .backgroundLightBlue section, .backgroundLightBlue footer {
+  background-color: #fff;
+}
+
+.backgroundBlue {
+  background-color: #192B3C;
+}
+
+.headerDark {
+  background-color: #47586b;
+  color: #fff;
+}
+
+.navLight {
+  background-color: #fff;
+}
+.navLight ul li a {
+  background-color: #fff;
+}
+.navLight ul li a:link {
+  color: #000;
+}
+.navLight ul li a:visited {
+  color: #000;
+}
+
+.navDark {
+  background-color: #47586b;
+}
+.navDark ul li a {
+  background-color: #47586b;
+}
+.navDark ul li a:link {
+  color: #fff;
+}
+.navDark ul li a:visited {
+  color: #fff;
+}
+
+.sectionDark {
+  background-color: #47586b;
+  color: #fff;
+}
+.sectionDark div {
+  background-color: #fff;
+  color: #000;
+}
+
+.footerLight {
+  flex: 1 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: auto;
+}
+.footerLight a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0px 10px 0px;
+}
+.footerLight a img {
+  width: 40%;
+}
+.footerLight a img[src="img/linkedin_logo.png"] {
+  border-radius: 3px;
+}
+.footerLight a img[src="img/linkedin_logo.png"]:hover {
+  filter: brightness(105%);
+  border-radius: 3px;
+}
+.footerLight a img[src="img/github_logo.png"] {
+  border-radius: 1rem;
+}
+.footerLight a img[src="img/github_logo.png"]:hover {
+  border-radius: 1rem;
+}
+
+.footerDark {
+  background-color: #47586b;
+}
+.footerDark img {
+  background: white;
+  background: radial-gradient(circle, white 62%, #47586b 75%);
+}
+.footerDark img[src="img/github_logo.png"] {
+  border-radius: 1rem;
+}
+.footerDark img[src="img/github_logo.png"]:hover {
+  filter: opacity(0.85) brightness(110%);
+  border-radius: 1rem;
+}
+
+.formDark {
+  background-color: #47586b;
+  color: #fff;
+}
+
+/*****************/
+/* MAIN SECTIONS */
+/*****************/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Karla", sans-serif;
+}
+
+button {
+  cursor: pointer;
+  padding: 10px;
+  font-size: 2vh;
+  color: #fff;
+}
+
+body {
+  overflow: hidden;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 5rem;
+  border: 1px solid black;
+  margin-bottom: 4rem;
+  font-weight: 900;
+  font-size: 2rem;
+  text-align: center;
+  margin: 2rem 3rem 3rem 3rem;
+}
+
+.grid-2-col {
+  display: grid;
+  height: 100vh;
+  width: 100vw;
+  grid-template-columns: 0.12fr 1fr;
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+.grid-2-col .dark-mode {
+  margin-top: 2rem;
+}
+.grid-2-col nav {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  grid-template-rows: 0.1fr 1fr 0.1fr;
+  border: 1px solid black;
+  border-top: none;
+  border-bottom: none;
+  align-items: center;
+  justify-items: center;
+}
+.grid-2-col nav ul {
+  list-style: none;
+  line-height: 8vh;
+  font-size: 2vh;
+}
+.grid-2-col nav ul li {
+  background-color: #fff;
+}
+.grid-2-col nav ul li a {
+  display: block;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+}
+.grid-2-col nav ul li a :link {
+  color: black;
+}
+.grid-2-col nav ul li a :visited {
+  color: black;
+}
+.grid-2-col main {
+  overflow-y: scroll;
+}
+
+.images {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 2rem;
+  grid-row-gap: 1rem;
+  align-items: center;
+  justify-items: center;
+  height: auto;
+  padding: 3rem;
+  margin: 3rem;
+  border: 1px solid black;
+}
+.images * {
+  padding: 1rem;
+  margin: 0.5rem;
+}
+.images .div1 {
+  border: 1px solid black;
+  width: 6rem;
+  text-align: center;
+}
+.images .div2 {
+  border: 1px solid black;
+  width: 6rem;
+  text-align: center;
+}
+.images .div3 {
+  border: 1px solid black;
+  width: 6rem;
+  text-align: center;
+}
+
+.overview-1 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 2rem;
+  grid-row-gap: 1rem;
+  align-items: center;
+  justify-items: center;
+  height: auto;
+  padding: 3rem;
+  margin: 3rem;
+  border: 1px solid black;
+}
+
+.overview-2 {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  align-items: center;
+  justify-items: center;
+  height: auto;
+  padding: 3rem;
+  margin: 3rem;
+  border: 1px solid black;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  align-items: center;
+  justify-items: center;
+  height: auto;
+  padding: 3rem;
+  margin: 3rem;
+  border: 1px solid black;
+}
+
+.concern {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  align-items: center;
+  justify-items: center;
+  height: auto;
+  padding: 3rem;
+  margin: 3rem;
+  border: 1px solid black;
+}
+
+.optimism {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  align-items: center;
+  justify-items: center;
+  height: auto;
+  padding: 3rem;
+  margin: 3rem;
+  border: 1px solid black;
+}
+
+.contact {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  align-items: center;
+  justify-items: center;
+  height: auto;
+  padding: 3rem;
+  margin: 3rem;
+  border: 1px solid black;
+  padding: 1rem;
+}
+
+/****************/
+/* CONTACT FORM */
+/****************/
+.form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 2rem;
+}
+.form-container form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 40rem;
+  font-size: 1rem;
+}
+.form-container label {
+  margin-bottom: 1rem;
+}
+.form-container input {
+  width: 100%;
+  padding: 0.3rem;
+  margin-bottom: 1rem;
+  font-family: "Montserrat", sans-serif;
+}
+.form-container textarea {
+  width: 100%;
+  height: 140px;
+  padding: 0.3rem;
+  margin-bottom: 1rem;
+  font-family: "Montserrat", sans-serif;
+}
+.form-container button {
+  width: 100%;
+  height: 3rem;
+  align-self: center;
+  font-family: "Sen", sans-serif;
+  font-size: 1rem;
+  color: #000;
+}
+
+footer {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  border: 1px solid black;
+  padding: 3rem;
+  margin: 3rem;
+}
+
+/*# sourceMappingURL=style.css.map */

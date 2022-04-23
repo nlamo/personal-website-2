@@ -1,4 +1,20 @@
 /***************/
+/** VARIABLES **/
+/***************/
+
+$background-dark-blue: #192B3C;
+$background-light-blue: #f0f8ff;
+
+$section-dark-blue: #47586b;
+
+$button-grey-blue: #d0d7e4;
+$button-hover-blue: #4682b4;
+
+$white: #fff;
+$black: #000;
+
+
+/***************/
 /** UTILITIES **/
 /***************/
 
@@ -15,7 +31,7 @@
    height: auto;
    padding: 3rem;
    margin: 3rem;
-   border: 1px solid black;
+   border: 1px solid $black;
 }
 
 @mixin grid-3-col-2-row {
@@ -29,7 +45,7 @@
    height: auto;
    padding: 3rem;
    margin: 3rem;
-   border: 1px solid black;
+   border: 1px solid $black;
 }
 
 @mixin grid-3-col-1-row {
@@ -43,7 +59,7 @@
    height: auto;
    padding: 3rem;
    margin: 3rem;
-   border: 1px solid black;
+   border: 1px solid $black;
 }
 
 @mixin grid-3-row-1-column {
@@ -65,72 +81,71 @@
    height: auto;
    padding: 3rem;
    margin: 3rem;
-   border: 1px solid black;
+   border: 1px solid $black;
 }
+
 
 /*****************/
 /** VUE CLASSES **/
 /*****************/
 
 .backgroundLightBlue {
-   background-color: #f0f8ff;
+   background-color: $background-light-blue;
 
    header, section, footer {
-      background-color: #fff;
+      background-color: $white;
    }
-
 }
 
 .backgroundBlue {
-   background-color: #192B3C;
+   background-color: $background-dark-blue;
 }
 
 .headerDark {
-   background-color: #47586b;
-   color: #fff;
+   background-color: $section-dark-blue;
+   color: $white;
 }
 
 .navLight {
-   background-color: #fff;
+   background-color: $white;
 
    ul li a {
-      background-color: #fff;
+      background-color: $white;
 
       &:link {
-         color: #000;
+         color: $black;
       }
       
       &:visited {
-         color: #000;
+         color: $black;
       }
 
    }
 }
 
 .navDark {
-   background-color: #47586b;
+   background-color: $section-dark-blue;
 
    ul li a {
-      background-color: #47586b;
+      background-color: $section-dark-blue;
 
       &:link {
-         color: #fff;
+         color: $white;
       }
       
       &:visited {
-         color: #fff;
+         color: $white;
       }
-
    }
 }
 
 .sectionDark {
-   background-color: #47586b;
-   color: #fff;
+   background-color: $section-dark-blue;
+   color: $white;
 
    div {
-      background-color: #fff;
-      color: #000;
+      background-color: $white;
+      color: $black;
    }
 }
 
@@ -171,7 +186,7 @@
 }
 
 .footerDark {
-   background-color:#47586b;
+   background-color: $section-dark-blue;
 
    img { 
       background: rgb(255,255,255);
@@ -189,9 +204,10 @@
 }
 
 .formDark {
-   background-color:#47586b;
-   color: #fff;
+   background-color: $section-dark-blue;
+   color: $white;
 }
+
 
 /*****************/
 /* MAIN SECTIONS */
@@ -208,7 +224,7 @@ button {
    cursor: pointer;
    padding: 10px;
    font-size: 2vh;
-   color: #fff;
+   color: $white;
 }
 
 // Entire body overflow is hidden, we set the scroll for the content with 'overflow-y'
@@ -221,7 +237,7 @@ header {
    align-items: center;
    justify-content: center;
    height: 5rem;
-   border: 1px solid black;
+   border: 1px solid $black;
    margin-bottom: 4rem;
    font-weight: 900;
    font-size: 2rem;
@@ -248,7 +264,7 @@ header {
       @include grid-3-row-1-column;
 
       grid-template-rows: .1fr 1fr .1fr;
-      border: 1px solid black;
+      border: 1px solid $black;
       border-top: none;
       border-bottom: none;
       align-items: center;
@@ -260,7 +276,7 @@ header {
          font-size: 2vh;
 
          li {
-            background-color: #fff;
+            background-color: $white;
 
             a {
                display: block;
@@ -268,11 +284,11 @@ header {
                text-decoration: none;
 
                :link {
-                  color: black;
+                  color: $black;
                }
 
                :visited {
-                  color: black;
+                  color: $black;
                }
             }
          }
@@ -294,19 +310,19 @@ header {
    }
 
    .div1 {
-      border: 1px solid black;
+      border: 1px solid $black;
       width: 6rem;
       text-align: center;
    }
 
    .div2 {
-      border: 1px solid black;
+      border: 1px solid $black;
       width: 6rem;
       text-align: center;
    }
 
    .div3 {
-      border: 1px solid black;
+      border: 1px solid $black;
       width: 6rem;
       text-align: center;
    }
@@ -338,6 +354,7 @@ header {
    padding: 1rem; // override padding in grid-single
 }
 
+
 /****************/
 /* CONTACT FORM */
 /****************/
@@ -347,6 +364,7 @@ header {
    flex-direction: column;
    justify-content: center;
    margin: 2rem;
+   
 
    form {
       display: flex;
@@ -364,7 +382,6 @@ header {
       width: 100%;
       padding: 0.3rem;
       margin-bottom: 1rem;
-      font-family: "Montserrat", sans-serif;
    }
 
    textarea {
@@ -372,16 +389,21 @@ header {
       height: 140px;
       padding: 0.3rem;
       margin-bottom: 1rem;
-      font-family: "Montserrat", sans-serif;
    }
 
    button {
       width: 100%;
       height: 3rem;
       align-self: center;
-      font-family: "Sen", sans-serif;
+      font-family: inherit;
       font-size: 1rem;
-      color: #000;
+      background-color: $button-grey-blue;
+      color: $black;
+
+      &:hover {
+         border: 3px solid $button-hover-blue;
+         filter: brightness(105%);
+      }
    }
 }
 
@@ -389,7 +411,7 @@ footer {
    display: grid;
    align-items: center;
    justify-items: center;
-   border: 1px solid black;
+   border: 1px solid $black;
    padding: 3rem;
    margin: 3rem;
 }

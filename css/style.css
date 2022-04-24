@@ -10,12 +10,14 @@
 .backgroundLightBlue {
   background-color: #f0f8ff;
 }
-.backgroundLightBlue header, .backgroundLightBlue section, .backgroundLightBlue footer {
+.backgroundLightBlue header,
+.backgroundLightBlue section,
+.backgroundLightBlue footer {
   background-color: #fff;
 }
 
 .backgroundBlue {
-  background-color: #192B3C;
+  background-color: #192b3c;
 }
 
 .headerDark {
@@ -131,6 +133,7 @@ body {
 
 header {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 5rem;
@@ -139,9 +142,33 @@ header {
   font-weight: 900;
   font-size: 2rem;
   text-align: center;
+  padding: 3.5rem;
   margin: 2rem 3rem 3rem 3rem;
 }
+header h3 {
+  font-size: 2.7rem;
+}
+header h6 {
+  letter-spacing: 2px;
+}
 
+.animated-header-text {
+  --bg-size: 400%;
+  --color-one: rgb(86, 136, 201);
+  --color-two: rgb(152, 181, 185);
+  background: linear-gradient(90deg, var(--color-one), var(--color-two), var(--color-one)) 0 0/var(--bg-size) 100%;
+  animation: move-bg 30s infinite linear;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-weight: 900;
+}
+
+@keyframes move-bg {
+  to {
+    background-position: var(--bg-size) 0;
+  }
+}
 .grid-2-col {
   display: grid;
   height: 100vh;
@@ -209,17 +236,20 @@ header {
 }
 .images .div1 {
   border: 1px solid #000;
-  width: 6rem;
+  width: 17rem;
+  height: 17rem;
   text-align: center;
 }
 .images .div2 {
   border: 1px solid #000;
-  width: 6rem;
+  width: 17rem;
+  height: 17rem;
   text-align: center;
 }
 .images .div3 {
   border: 1px solid #000;
-  width: 6rem;
+  width: 17rem;
+  height: 17rem;
   text-align: center;
 }
 
@@ -321,7 +351,7 @@ header {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  width: 40rem;
+  max-width: 40rem;
   font-size: 1rem;
 }
 .form-container label {

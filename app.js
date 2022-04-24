@@ -3,7 +3,7 @@ const app = Vue.createApp({
       return {
          lightMode: true,
          darkMode: false,
-         buttonBackground: "#000",
+         buttonBackground: "#192b3c",
          buttonText: "Darken",
          buttonTextColor: "#fff"
       };
@@ -17,7 +17,7 @@ const app = Vue.createApp({
          } 
          else if (this.buttonText == "Lighten") {
             this.buttonText = "Darken";
-            this.buttonBackground = "#000";
+            this.buttonBackground = "#192b3c";
             this.buttonTextColor = "#fff";
          }
       },

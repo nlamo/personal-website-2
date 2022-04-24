@@ -2,7 +2,7 @@
 /** VARIABLES **/
 /***************/
 
-$background-dark-blue: #192B3C;
+$background-dark-blue: #192b3c;
 $background-light-blue: #f0f8ff;
 
 $section-dark-blue: #47586b;
@@ -12,7 +12,6 @@ $button-hover-blue: #4682b4;
 
 $white: #fff;
 $black: #000;
-
 
 /***************/
 /** UTILITIES **/
@@ -84,7 +83,6 @@ $black: #000;
    border: 1px solid $black;
 }
 
-
 /*****************/
 /** VUE CLASSES **/
 /*****************/
@@ -92,7 +90,9 @@ $black: #000;
 .backgroundLightBlue {
    background-color: $background-light-blue;
 
-   header, section, footer {
+   header,
+   section,
+   footer {
       background-color: $white;
    }
 }
@@ -115,11 +115,10 @@ $black: #000;
       &:link {
          color: $black;
       }
-      
+
       &:visited {
          color: $black;
       }
-
    }
 }
 
@@ -132,7 +131,7 @@ $black: #000;
       &:link {
          color: $white;
       }
-      
+
       &:visited {
          color: $white;
       }
@@ -165,7 +164,7 @@ $black: #000;
       img {
          width: 40%;
 
-         &[src="img/linkedin_logo.png"] {
+         &[src='img/linkedin_logo.png'] {
             border-radius: 3px;
 
             &:hover {
@@ -174,7 +173,7 @@ $black: #000;
             }
          }
 
-         &[src="img/github_logo.png"] {
+         &[src='img/github_logo.png'] {
             border-radius: 1rem;
 
             &:hover {
@@ -188,15 +187,19 @@ $black: #000;
 .footerDark {
    background-color: $section-dark-blue;
 
-   img { 
-      background: rgb(255,255,255);
-      background: radial-gradient(circle, rgba(255,255,255,1) 62%, rgba(71,88,107,1) 75%);
+   img {
+      background: rgb(255, 255, 255);
+      background: radial-gradient(
+         circle,
+         rgba(255, 255, 255, 1) 62%,
+         rgba(71, 88, 107, 1) 75%
+      );
 
-      &[src="img/github_logo.png"] {
+      &[src='img/github_logo.png'] {
          border-radius: 1rem;
 
          &:hover {
-            filter: opacity(.85) brightness(110%);
+            filter: opacity(0.85) brightness(110%);
             border-radius: 1rem;
          }
       }
@@ -208,7 +211,6 @@ $black: #000;
    color: $white;
 }
 
-
 /*****************/
 /* MAIN SECTIONS */
 /*****************/
@@ -217,7 +219,7 @@ $black: #000;
    box-sizing: border-box;
    margin: 0;
    padding: 0;
-   font-family: "Karla", sans-serif;
+   font-family: 'Karla', sans-serif;
 }
 
 button {
@@ -234,6 +236,7 @@ body {
 
 header {
    display: flex;
+   flex-direction: column;
    align-items: center;
    justify-content: center;
    height: 5rem;
@@ -242,7 +245,39 @@ header {
    font-weight: 900;
    font-size: 2rem;
    text-align: center;
+   padding: 3.5rem;
    margin: 2rem 3rem 3rem 3rem;
+
+   h3 {
+      font-size: 2.7rem;
+   }
+   h6 {
+      letter-spacing: 2px;
+   }
+}
+
+// Really nice! Attribution: https://codepen.io/jh3y/pen/YzYgMra, thanks @jh3y
+.animated-header-text {
+   --bg-size: 400%;
+   --color-one: rgb(86, 136, 201);
+   --color-two: rgb(152, 181, 185);
+   background: linear-gradient(
+      90deg,
+      var(--color-one),
+      var(--color-two),
+      var(--color-one)
+   ) 0 0 / var(--bg-size) 100%;
+   animation: move-bg 30s infinite linear;
+   -webkit-background-clip: text;
+   background-clip: text;
+   color: transparent;
+   font-weight: 900;
+}
+
+@keyframes move-bg {
+   to {
+      background-position: var(--bg-size) 0;
+   }
 }
 
 // Main parent content, two columns for the whole page
@@ -258,12 +293,12 @@ header {
    .dark-mode {
       margin-top: 2rem;
    }
-   
+
    // Nevigation bar (left column)
    nav {
       @include grid-3-row-1-column;
 
-      grid-template-rows: .1fr 1fr .1fr;
+      grid-template-rows: 0.1fr 1fr 0.1fr;
       border: 1px solid $black;
       border-top: none;
       border-bottom: none;
@@ -311,19 +346,22 @@ header {
 
    .div1 {
       border: 1px solid $black;
-      width: 6rem;
+      width: 17rem;
+      height: 17rem;
       text-align: center;
    }
 
    .div2 {
       border: 1px solid $black;
-      width: 6rem;
+      width: 17rem;
+      height: 17rem;
       text-align: center;
    }
 
    .div3 {
       border: 1px solid $black;
-      width: 6rem;
+      width: 17rem;
+      height: 17rem;
       text-align: center;
    }
 }
@@ -354,7 +392,6 @@ header {
    padding: 1rem; // override padding in grid-single
 }
 
-
 /****************/
 /* CONTACT FORM */
 /****************/
@@ -364,13 +401,12 @@ header {
    flex-direction: column;
    justify-content: center;
    margin: 2rem;
-   
 
    form {
       display: flex;
       justify-content: center;
       flex-direction: column;
-      width: 40rem;
+      max-width: 40rem;
       font-size: 1rem;
    }
 
@@ -415,4 +451,3 @@ footer {
    padding: 3rem;
    margin: 3rem;
 }
-

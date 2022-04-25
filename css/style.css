@@ -51,6 +51,13 @@
   color: #fff;
 }
 
+.imgBackground .div1, .imgBackground .div2, .imgBackground .div3 {
+  background: #c5d4e0;
+}
+.imgBackground img {
+  background: #c5d4e0;
+}
+
 .sectionDark {
   background-color: #47586b;
   color: #fff;
@@ -137,16 +144,16 @@ header {
   align-items: center;
   justify-content: center;
   height: 5rem;
-  border: 1px solid #000;
+  padding: 3.5rem;
+  margin: 2rem 3rem 3rem 3rem;
   margin-bottom: 4rem;
   font-weight: 900;
   font-size: 2rem;
   text-align: center;
-  padding: 3.5rem;
-  margin: 2rem 3rem 3rem 3rem;
+  border: 1px solid #000;
 }
 header h3 {
-  font-size: 2.7rem;
+  font-size: 2.5rem;
 }
 header h6 {
   letter-spacing: 2px;
@@ -157,7 +164,7 @@ header h6 {
   --color-one: rgb(86, 136, 201);
   --color-two: rgb(152, 181, 185);
   background: linear-gradient(90deg, var(--color-one), var(--color-two), var(--color-one)) 0 0/var(--bg-size) 100%;
-  animation: move-bg 30s infinite linear;
+  animation: move-bg 20s infinite linear;
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -171,12 +178,12 @@ header h6 {
 }
 .grid-2-col {
   display: grid;
-  height: 100vh;
-  width: 100vw;
   grid-template-columns: 0.12fr 1fr;
   grid-template-rows: 1fr;
   grid-column-gap: 0px;
   grid-row-gap: 0px;
+  height: 100vh;
+  width: 100vw;
 }
 .grid-2-col .dark-mode {
   margin-top: 2rem;
@@ -188,11 +195,11 @@ header h6 {
   grid-column-gap: 0px;
   grid-row-gap: 0px;
   grid-template-rows: 0.1fr 1fr 0.1fr;
+  align-items: center;
+  justify-items: center;
   border: 1px solid #000;
   border-top: none;
   border-bottom: none;
-  align-items: center;
-  justify-items: center;
 }
 .grid-2-col nav ul {
   list-style: none;
@@ -235,22 +242,34 @@ header h6 {
   margin: 0.5rem;
 }
 .images .div1 {
-  border: 1px solid #000;
-  width: 17rem;
-  height: 17rem;
+  aspect-ratio: 1/1;
+  width: 80%;
   text-align: center;
+  border: 1px solid #000;
+}
+.images .div1 img {
+  object-fit: cover;
+  width: 100%;
 }
 .images .div2 {
-  border: 1px solid #000;
-  width: 17rem;
-  height: 17rem;
+  aspect-ratio: 1/1;
+  width: 80%;
   text-align: center;
+  border: 1px solid #000;
+}
+.images .div2 img {
+  object-fit: cover;
+  width: 100%;
 }
 .images .div3 {
-  border: 1px solid #000;
-  width: 17rem;
-  height: 17rem;
+  aspect-ratio: 1/1;
+  width: 80%;
   text-align: center;
+  border: 1px solid #000;
+}
+.images .div3 img {
+  object-fit: cover;
+  width: 100%;
 }
 
 .overview-1 {
@@ -372,9 +391,9 @@ header h6 {
   width: 100%;
   height: 3rem;
   align-self: center;
+  background-color: #d0d7e4;
   font-family: inherit;
   font-size: 1rem;
-  background-color: #d0d7e4;
   color: #000;
 }
 .form-container button:hover {
@@ -386,9 +405,9 @@ footer {
   display: grid;
   align-items: center;
   justify-items: center;
-  border: 1px solid #000;
   padding: 3rem;
   margin: 3rem;
+  border: 1px solid #000;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -13,7 +13,7 @@
       rel="stylesheet" />
    <script src="https://unpkg.com/vue@next" defer></script>
    <script src="app.js" defer></script>
-   <title>Design Sandbox</title>
+   <title>Nicholas LaMothe - Personal Website</title>
 </head>
 
 <body>
@@ -44,11 +44,11 @@
             <h6>web developer, etc.</h6>
          </header>
 
-         <section class="images" v-bind:class="{ sectionDark: darkMode }">
-            <!-- TODO: first section grid, 1 row 3 col -->
-            <div class="div1">Image 1</div>
-            <div class="div2">Image 2</div>
-            <div class="div3">Image 3</div>
+         <section class="images" v-bind:class="{ sectionDark: darkMode, imgBackground: darkMode }">
+            <!-- Not required, but I'm gonna attribute these: https://undraw.co/ (!) - great resource -->
+            <div class="div1"><img src="./img/undraw_firmware_re_fgdy.svg" alt="Firmware"></div>
+            <div class="div2"><img src="./img/undraw_handcrafts_space.svg" alt="Space"></div>
+            <div class="div3"><img src="./img/undraw_dev_productivity_re_fylf.svg" alt="Productivity"></div>
          </section>
          <section class="overview-1" v-bind:class="{ sectionDark: darkMode }">
             <p>

@@ -165,18 +165,21 @@ $dark-green: #344b47;
    }
 }
 
-.imgBackground {
+.imgBackgroundDark {
    .div1, .div2, .div3 {
       background: $light-grey;
-   }
 
-   img {
-      background: $light-grey;
-   }
+      &__quote {        
+         img {
+            transition: 0s;
+            background: $light-grey;
+         }
+      }
 
-   p {
-      color: $dark-green;
-      font-weight: 700;
+      p {
+         color: $dark-green;
+         font-weight: 700;
+      }
    }
 }
 
@@ -202,8 +205,8 @@ $dark-green: #344b47;
 }
 
 .footerLight {
-   flex: 1 0 auto;
    display: flex;
+   flex: 1 0 auto;
    justify-content: center;
    align-items: center;
    overflow: auto;
@@ -408,11 +411,12 @@ header {
       img {
          object-fit: cover;
          width: 100%;
+         opacity: 1;
+         transition: .5s;
       }
 
       &__quote {
          position: absolute;
-         visibility: hidden;
          inset: 0;
          opacity: 0;
          padding-right: 1.8rem;
@@ -420,15 +424,14 @@ header {
       }
 
       &:hover {
-
          :not(p) {
             opacity: .05;
+            transition: .5s;
          }
 
          .div1__quote {
             top: 30px;
             width: 100%;
-            visibility: visible;
             opacity: 1;
             transition: .7s;
          }
@@ -436,7 +439,6 @@ header {
          .div2__quote {
             top: 30px;
             width: 100%;
-            visibility: visible;
             opacity: 1;
             transition: .7s;
          }
@@ -444,7 +446,6 @@ header {
          .div3__quote {
             top: 30px;
             width: 100%;
-            visibility: visible;
             opacity: 1;
             transition: .7s;
          }

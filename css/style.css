@@ -73,13 +73,14 @@
   color: #fff;
 }
 
-.imgBackground .div1, .imgBackground .div2, .imgBackground .div3 {
+.imgBackgroundDark .div1, .imgBackgroundDark .div2, .imgBackgroundDark .div3 {
   background: #c5d4e0;
 }
-.imgBackground img {
+.imgBackgroundDark .div1__quote img, .imgBackgroundDark .div2__quote img, .imgBackgroundDark .div3__quote img {
+  transition: 0s;
   background: #c5d4e0;
 }
-.imgBackground p {
+.imgBackgroundDark .div1 p, .imgBackgroundDark .div2 p, .imgBackgroundDark .div3 p {
   color: #344b47;
   font-weight: 700;
 }
@@ -100,8 +101,8 @@
 }
 
 .footerLight {
-  flex: 1 0 auto;
   display: flex;
+  flex: 1 0 auto;
   justify-content: center;
   align-items: center;
   overflow: auto;
@@ -283,10 +284,11 @@ header h6 {
 .images .div1 img, .images .div2 img, .images .div3 img {
   object-fit: cover;
   width: 100%;
+  opacity: 1;
+  transition: 0.5s;
 }
 .images .div1__quote, .images .div2__quote, .images .div3__quote {
   position: absolute;
-  visibility: hidden;
   inset: 0;
   opacity: 0;
   padding-right: 1.8rem;
@@ -294,25 +296,23 @@ header h6 {
 }
 .images .div1:hover :not(p), .images .div2:hover :not(p), .images .div3:hover :not(p) {
   opacity: 0.05;
+  transition: 0.5s;
 }
 .images .div1:hover .div1__quote, .images .div2:hover .div1__quote, .images .div3:hover .div1__quote {
   top: 30px;
   width: 100%;
-  visibility: visible;
   opacity: 1;
   transition: 0.7s;
 }
 .images .div1:hover .div2__quote, .images .div2:hover .div2__quote, .images .div3:hover .div2__quote {
   top: 30px;
   width: 100%;
-  visibility: visible;
   opacity: 1;
   transition: 0.7s;
 }
 .images .div1:hover .div3__quote, .images .div2:hover .div3__quote, .images .div3:hover .div3__quote {
   top: 30px;
   width: 100%;
-  visibility: visible;
   opacity: 1;
   transition: 0.7s;
 }

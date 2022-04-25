@@ -57,6 +57,10 @@
 .imgBackground img {
   background: #c5d4e0;
 }
+.imgBackground p {
+  color: #344b47;
+  font-weight: 700;
+}
 
 .sectionDark {
   background-color: #47586b;
@@ -241,35 +245,48 @@ header h6 {
   padding: 1rem;
   margin: 0.5rem;
 }
-.images .div1 {
+.images .div1, .images .div2, .images .div3 {
+  position: relative;
   aspect-ratio: 1/1;
   width: 80%;
   text-align: center;
   border: 1px solid #000;
 }
-.images .div1 img {
+.images .div1 img, .images .div2 img, .images .div3 img {
   object-fit: cover;
   width: 100%;
 }
-.images .div2 {
-  aspect-ratio: 1/1;
-  width: 80%;
-  text-align: center;
-  border: 1px solid #000;
+.images .div1__description, .images .div2__description, .images .div3__description {
+  position: absolute;
+  visibility: hidden;
+  inset: 0;
+  opacity: 0;
+  padding-right: 1.8rem;
+  font-size: 1vw;
 }
-.images .div2 img {
-  object-fit: cover;
+.images .div1:hover :not(p), .images .div2:hover :not(p), .images .div3:hover :not(p) {
+  opacity: 0.05;
+}
+.images .div1:hover .div1__description, .images .div2:hover .div1__description, .images .div3:hover .div1__description {
+  top: 30px;
   width: 100%;
+  visibility: visible;
+  opacity: 1;
+  transition: 0.7s;
 }
-.images .div3 {
-  aspect-ratio: 1/1;
-  width: 80%;
-  text-align: center;
-  border: 1px solid #000;
-}
-.images .div3 img {
-  object-fit: cover;
+.images .div1:hover .div2__description, .images .div2:hover .div2__description, .images .div3:hover .div2__description {
+  top: 30px;
   width: 100%;
+  visibility: visible;
+  opacity: 1;
+  transition: 0.7s;
+}
+.images .div1:hover .div3__description, .images .div2:hover .div3__description, .images .div3:hover .div3__description {
+  top: 30px;
+  width: 100%;
+  visibility: visible;
+  opacity: 1;
+  transition: 0.7s;
 }
 
 .overview-1 {

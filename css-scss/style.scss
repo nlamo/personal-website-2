@@ -13,6 +13,7 @@ $button-hover-blue: #4682b4;
 $white: #fff;
 $black: #000;
 $light-grey: #c5d4e0;
+$dark-green: #344b47;
 
 /***************/
 /** UTILITIES **/
@@ -144,8 +145,14 @@ $light-grey: #c5d4e0;
    .div1, .div2, .div3 {
       background: $light-grey;
    }
+
    img {
       background: $light-grey;
+   }
+
+   p {
+      color: $dark-green;
+      font-weight: 700;
    }
 }
 
@@ -356,7 +363,8 @@ header {
       margin: 0.5rem;
    }
 
-   .div1 {
+   .div1, .div2, .div3 {
+      position: relative;
       aspect-ratio: 1 / 1;
       width: 80%;
       text-align: center;
@@ -366,30 +374,45 @@ header {
          object-fit: cover;
          width: 100%;
       }
-   }
 
-   .div2 {
-      aspect-ratio: 1 / 1;
-      width: 80%;
-
-      text-align: center;
-      border: 1px solid $black;
-
-      img {
-         object-fit: cover;
-         width: 100%;
+      &__description {
+         position: absolute;
+         visibility: hidden;
+         inset: 0;
+         opacity: 0;
+         padding-right: 1.8rem;
+         font-size: 1vw;
       }
-   }
 
-   .div3 {
-      aspect-ratio: 1 / 1;
-      width: 80%;
-      text-align: center;
-      border: 1px solid $black;
+      &:hover {
 
-      img {
-         object-fit: cover;
-         width: 100%;
+         :not(p) {
+            opacity: .05;
+         }
+
+         .div1__description {
+            top: 30px;
+            width: 100%;
+            visibility: visible;
+            opacity: 1;
+            transition: .7s;
+         }
+
+         .div2__description {
+            top: 30px;
+            width: 100%;
+            visibility: visible;
+            opacity: 1;
+            transition: .7s;
+         }
+
+         .div3__description {
+            top: 30px;
+            width: 100%;
+            visibility: visible;
+            opacity: 1;
+            transition: .7s;
+         }
       }
    }
 }

@@ -4,6 +4,28 @@
 /***************/
 /** UTILITIES **/
 /***************/
+.highlight-selection-container {
+  position: relative;
+  z-index: 0;
+}
+.highlight-selection-container img {
+  width: 19rem;
+}
+.highlight-selection-container a:link {
+  color: #344b47;
+}
+.highlight-selection-container a:visited {
+  color: #344b47;
+}
+
+.highlight-selection {
+  position: absolute;
+  z-index: 1;
+  right: -45px;
+  bottom: -90px;
+  pointer-events: none;
+}
+
 /*****************/
 /** VUE CLASSES **/
 /*****************/
@@ -69,6 +91,12 @@
 .sectionDark div {
   background-color: #fff;
   color: #000;
+}
+.sectionDark a:link {
+  color: #c5d4e0;
+}
+.sectionDark a:visited {
+  color: #c5d4e0;
 }
 
 .footerLight {
@@ -256,7 +284,7 @@ header h6 {
   object-fit: cover;
   width: 100%;
 }
-.images .div1__description, .images .div2__description, .images .div3__description {
+.images .div1__quote, .images .div2__quote, .images .div3__quote {
   position: absolute;
   visibility: hidden;
   inset: 0;
@@ -267,21 +295,21 @@ header h6 {
 .images .div1:hover :not(p), .images .div2:hover :not(p), .images .div3:hover :not(p) {
   opacity: 0.05;
 }
-.images .div1:hover .div1__description, .images .div2:hover .div1__description, .images .div3:hover .div1__description {
+.images .div1:hover .div1__quote, .images .div2:hover .div1__quote, .images .div3:hover .div1__quote {
   top: 30px;
   width: 100%;
   visibility: visible;
   opacity: 1;
   transition: 0.7s;
 }
-.images .div1:hover .div2__description, .images .div2:hover .div2__description, .images .div3:hover .div2__description {
+.images .div1:hover .div2__quote, .images .div2:hover .div2__quote, .images .div3:hover .div2__quote {
   top: 30px;
   width: 100%;
   visibility: visible;
   opacity: 1;
   transition: 0.7s;
 }
-.images .div1:hover .div3__description, .images .div2:hover .div3__description, .images .div3:hover .div3__description {
+.images .div1:hover .div3__quote, .images .div2:hover .div3__quote, .images .div3:hover .div3__quote {
   top: 30px;
   width: 100%;
   visibility: visible;

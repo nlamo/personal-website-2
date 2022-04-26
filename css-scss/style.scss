@@ -154,14 +154,7 @@ $dark-green: #344b47;
 
    ul li a {
       background-color: $section-dark-blue;
-
-      &:link {
-         color: $white;
-      }
-
-      &:visited {
-         color: $white;
-      }
+      color: $white;
    }
 }
 
@@ -276,6 +269,10 @@ $dark-green: #344b47;
    margin: 0;
    padding: 0;
    font-family: 'Karla', sans-serif;
+}
+
+a {
+   cursor: pointer;
 }
 
 button {

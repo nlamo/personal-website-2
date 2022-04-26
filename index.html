@@ -12,6 +12,7 @@
       href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,300;0,500;0,600;0,700;0,800;1,300;1,500;1,700&display=swap"
       rel="stylesheet" />
    <script src="https://unpkg.com/vue@next" defer></script>
+   <script src="./js/vanilla.js" defer></script>
    <script src="app.js" defer></script>
    <title>Nicholas LaMothe - Personal Website</title>
 </head>
@@ -22,18 +23,18 @@
       <!-- Navigation bar -->
       <nav v-bind:class="{ navLight: lightMode, navDark: darkMode }">
          <div class="dark-mode">
-            <button v-on:click="setButtonText(); toggleDarkMode();"
+            <button @click="setButtonText(); toggleDarkMode();"
                v-bind:style="{ backgroundColor: buttonBackground, color: buttonTextColor }">
                {{ buttonText }}
             </button>
          </div>
          <ul>
-            <li><a href="#">Images</a></li>
-            <li><a href="#">Overview</a></li>
-            <li><a href="#">Projects</a></li>
-            <li><a href="#">Concern</a></li>
-            <li><a href="#">Optimism</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a @click="scrollToElement('images-section')">Images</a></li>
+            <li><a @click="scrollToElement('overview-section')">Overview</a></li>
+            <li><a @click="scrollToElement('projects-section')">Projects</a></li>
+            <li><a @click="scrollToElement('concern-section')">Concern</a></li>
+            <li><a @click="scrollToElement('optimism-section')">Optimism</a></li>
+            <li><a @click="scrollToElement('contact-section')">Contact</a></li>
          </ul>
       </nav>
 
@@ -44,7 +45,7 @@
             <h6>web developer, etc.</h6>
          </header>
 
-         <section class="images" v-bind:class="{ sectionDark: darkMode, imgBackgroundDark: darkMode }">
+         <section id="images-section" class="images" v-bind:class="{ sectionDark: darkMode, imgBackgroundDark: darkMode }">
             <!-- Not required, but I'm gonna attribute these: https://undraw.co/ (!) - great resource -->
             <div class="div1">
                <img src="./img/undraw_firmware_re_fgdy.svg" alt="Firmware">
@@ -59,7 +60,7 @@
                <p class="div3__quote">Practice yourself, for heaven's sake in little things, and then proceed to greater.<br><br> - Epictetus</p>
             </div>
          </section>
-         <section class="overview-1" v-bind:class="{ sectionDark: darkMode }">
+         <section id="overview-section" class="overview-1" v-bind:class="{ sectionDark: darkMode }">
             <p>
                My name is Nick, and I am a web developer. Originally from BC, currently residing in Montreal, 
                I've been studying programming for the last 3 1/2 years. Languages I have worked with: HTML/CSS, 
@@ -91,12 +92,12 @@
                intelligent life elsewhere in the universe.<br><br><br>
 
                <span class="highlight-selection-container">
-                  You can find my resume <a href="cv/nicholas-lamothe-cv.pdf">here</a>.
+                  You can find my resume <a href="cv/nicholas-lamothe-cv.pdf" target=”_blank”>here</a>.
                   <img class="highlight-selection" src="./img/highlight-selection.png" alt="">
                </span>
             </p>
          </section>
-         <section class="projects" v-bind:class="{ sectionDark: darkMode }"> 
+         <section id="projects-section" class="projects" v-bind:class="{ sectionDark: darkMode }"> 
             <p>
                Projects section. To be continued.<br><br>
             </p>
@@ -105,7 +106,7 @@
                it up over time.
             </p>
          </section>
-         <section class="concern" v-bind:class="{ sectionDark: darkMode }">
+         <section id="concern-section" class="concern" v-bind:class="{ sectionDark: darkMode }">
             <p>
                Concern section. Just an idea. What goes in here?<br><br><br>
             </p>
@@ -115,7 +116,7 @@
                get some insight into my state of mind, perhaps to start a conversation.
             </p>
          </section>
-         <section class="optimism" v-bind:class="{ sectionDark: darkMode }">
+         <section id="optimism-section" class="optimism" v-bind:class="{ sectionDark: darkMode }">
             <p>
                Optimism section. Looking forward to the good.<br><br><br>
             </p>
@@ -125,7 +126,7 @@
                blog of nerdy positivity. I am not sure.
             </p>
          </section>
-         <section class="contact" v-bind:class="{ sectionDark: darkMode }">
+         <section id="contact-section" class="contact" v-bind:class="{ sectionDark: darkMode }">
             <div class="form-container">
                <form v-bind:class="{ formDark: darkMode }" method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>">
                   <p><b>Got a question, consideration, or curiosity? Feel free to reach out. </b></p><br><br>

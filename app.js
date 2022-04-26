@@ -31,6 +31,13 @@ const app = Vue.createApp({
             this.lightMode = true;
          }
       },
+      scrollToElement(sectionID) {
+         let el = document.getElementById(sectionID);
+
+         if (el) {
+           el.scrollIntoView({ behavior: 'smooth'});
+         }
+      }
    },
 });
 

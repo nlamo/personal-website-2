@@ -23,7 +23,7 @@
       <!-- Navigation bar -->
       <nav v-bind:class="{ navLight: lightMode, navDark: darkMode }">
          <div class="dark-mode">
-            <button @click="setButtonText(); toggleDarkMode();"
+            <button @click="setButtonText(); toggleDarkMode(); playFingerSnap();"
                v-bind:style="{ backgroundColor: buttonBackground, color: buttonTextColor }">
                {{ buttonText }}
             </button>

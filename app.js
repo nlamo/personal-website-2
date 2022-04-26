@@ -37,6 +37,10 @@ const app = Vue.createApp({
          if (el) {
            el.scrollIntoView({ behavior: 'smooth'});
          }
+      },
+      playFingerSnap() {
+         let fingerSnap = new Audio('../sound/finger-snap.wav');
+         fingerSnap.play();
       }
    },
 });

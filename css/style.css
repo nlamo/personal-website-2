@@ -39,7 +39,7 @@
 }
 
 .backgroundBlue {
-  background-color: #192b3c;
+  background: radial-gradient(circle, #293849 48%, #192b3c 92%);
 }
 
 .headerDark {

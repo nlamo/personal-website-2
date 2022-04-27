@@ -3,6 +3,7 @@
 /***************/
 
 $background-dark-blue: #192b3c;
+$background-dark-blue-secondary: #293849;
 $background-light-blue: #f0f8ff;
 
 $section-dark-blue: #47586b;
@@ -125,7 +126,7 @@ $dark-green: #344b47;
 }
 
 .backgroundBlue {
-   background-color: $background-dark-blue;
+   background: radial-gradient(circle, $background-dark-blue-secondary 48%, $background-dark-blue 92%);
 }
 
 .headerDark {

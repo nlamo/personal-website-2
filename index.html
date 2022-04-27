@@ -52,23 +52,26 @@
                <!-- Not required, but I'm gonna attribute these: https://undraw.co/ (!) - great resource -->
                <div class="div1">
                   <img src="./img/undraw_firmware_re_fgdy.svg" alt="Firmware">
-                  <p class="div1__quote">The human mind is an open network of complex softwares working together.<br><br> - Sukant Ratnakar</p>
+                  <p class="div1__quote">The human mind is an open network of complex softwares working
+                     together.<br><br> - Sukant Ratnakar</p>
                </div>
                <div class="div2">
                   <img src="./img/undraw_handcrafts_space.svg" alt="Space">
-                  <p class="div2__quote">The highest activity a human being can attain is learning for understanding, because to understand is to be free.<br><br> - Spinoza</p>
+                  <p class="div2__quote">The highest activity a human being can attain is learning for understanding,
+                     because to understand is to be free.<br><br> - Spinoza</p>
                </div>
                <div class="div3">
                   <img src="./img/undraw_dev_productivity_re_fylf.svg" alt="Productivity">
-                  <p class="div3__quote">Practice yourself, for heaven's sake in little things, and then proceed to greater.<br><br> - Epictetus</p>
+                  <p class="div3__quote">Practice yourself, for heaven's sake in little things, and then proceed to
+                     greater.<br><br> - Epictetus</p>
                </div>
             </section>
          </div>
          <div id="overview-section">
             <section class="overview-1" v-bind:class="{ sectionDark: darkMode }">
                <p>
-                  My name is Nick, and I am a web developer. Originally from BC, currently residing in Montreal, 
-                  I've been studying programming for the last 3 1/2 years. Languages I have worked with: HTML/CSS, 
+                  My name is Nick, and I am a web developer. Originally from BC, currently residing in Montreal,
+                  I've been studying programming for the last 3 1/2 years. Languages I have worked with: HTML/CSS,
                   JavaScript, PHP, SQL, Java, C++, and Python.
                </p>
                <p>
@@ -86,16 +89,18 @@
          <div id="overview-section-2">
             <section class="overview-2" v-bind:class="{ sectionDark: darkMode }">
                <p>
-                  Quick bio. I used to be a boxer, and I've been illustrating semi-regularly my entire life. Thankfully, I no longer
+                  Quick bio. I used to be a boxer, and I've been illustrating semi-regularly my entire life. Thankfully,
+                  I no longer
                   box. Not good for the <i>cerveau</i>. Instead, I mostly run.<br><br>
-   
-                  My background is originally in philosophy and English literature, with special interest in ethics, epistemology,
+
+                  My background is originally in philosophy and English literature, with special interest in ethics,
+                  epistemology,
                   and philosophy of mind, but I've always been something of a tech nerd.<br><br>
-   
+
                   What else? I love food, cycling, chess, film, music (electronic/folk/prog/classical),
                   video games, nature, and the greatness of humanity. I also very much hope that we discover
                   intelligent life elsewhere in the universe.<br><br><br>
-   
+
                   <span class="highlight-selection-container">
                      You can find my resume <a href="cv/nicholas-lamothe-cv.pdf" target=”_blank”>here</a>.
                      <img class="highlight-selection" src="./img/highlight-selection.png" alt="">
@@ -104,12 +109,13 @@
             </section>
          </div>
          <div id="projects-section">
-            <section class="projects" v-bind:class="{ sectionDark: darkMode }"> 
+            <section class="projects" v-bind:class="{ sectionDark: darkMode }">
                <p>
                   Projects section. To be continued.<br><br>
                </p>
                <p>
-                  This will probably include references to my previous website, among other small projects. I'll have to build
+                  This will probably include references to my previous website, among other small projects. I'll have to
+                  build
                   it up over time.
                </p>
             </section>
@@ -121,7 +127,7 @@
                </p>
                <p>
                   My thought is that this will be a navigable little carousel or slider that will move through
-                  aphorisms or concerns that I have about the state of the world or the future. A way for the reader to 
+                  aphorisms or concerns that I have about the state of the world or the future. A way for the reader to
                   get some insight into my state of mind, perhaps to start a conversation.
                </p>
             </section>
@@ -132,8 +138,10 @@
                   Optimism section. Looking forward to the good.<br><br><br>
                </p>
                <p>
-                  This could also be a carousel. I would like it to be a short list of things that we can look forward to,
-                  perhaps with references to articles that are cause for optimism. Maybe it would be an integrated sort-of
+                  This could also be a carousel. I would like it to be a short list of things that we can look forward
+                  to,
+                  perhaps with references to articles that are cause for optimism. Maybe it would be an integrated
+                  sort-of
                   blog of nerdy positivity. I am not sure.
                </p>
             </section>
@@ -141,32 +149,47 @@
          <div id="contact-section">
             <section class="contact" v-bind:class="{ sectionDark: darkMode }">
                <div class="form-container">
-                  <form v-bind:class="{ formDark: darkMode }" method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>">
-                     <p><b>Got a question, consideration, or curiosity? Feel free to reach out. </b></p><br><br>
-         
-                     <label><u>E-mail</u></label>
-                     <input type="text" name="email">
-         
-                     <label><u>Subject</u></label>
-                     <input type="text" name="subject">
-         
-                     <label><u>Message</u></label>
-                     <textarea name="message"></textarea>
-         
-                     <label><u>Question</u></label>
-                     <input type="hidden" name="random-question" value="<?php echo $randomQuestion; ?>">
-                     <label>
-                        <span style="font-size: .9rem;">
-                           <!-- <?php echo $randomQuestion; ?> -->
-                           <p>This <i>will</i> be a question randomly generated by a PHP server.</p>
-                        </span>
-                     </label>
-         
-                     <input type="text" name="answer"><br>
-         
+                  <form v-bind:class="{ formDark: darkMode }" method="POST"
+                     action="<?php echo $_SERVER['PHP_SELF']; ?>">
+
+                     <table>
+                        <tr>
+                           <td><label>E-mail</label></td>
+                           <td><input type="text" name="email"></td>
+                        </tr>
+                        <tr>
+                           <td><label>Subject</label></td>
+                           <td><input type="text" name="subject"></td>
+                        </tr>
+                        <tr>
+                           <td><label>Message</label></td>
+                           <td><textarea name="message"></textarea></td>
+                        </tr>
+                        <tr>
+                           <td><label>Question</label></td>
+                           <td style="padding-bottom: 1.5rem;">
+                              <p><small>This will be a question randomly generated by a PHP server.</small></p>
+                              <input type="hidden" name="random-question" value="<?php echo $randomQuestion; ?>">
+                              <label>
+                                 <span style="font-size: .9rem;">
+                                    <!-- <?php echo $randomQuestion; ?> -->
+                                 </span>
+                              </label>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td>&nbsp;</td>
+                           <td>
+                              <input type="text" name="answer"><br>
+                           </td>
+                        </tr>
+                     </table>
+
+                     <br>
+
                      <button type="submit" name="submit" class="button">Submit</button>
                   </form>
-         
+
                   <!-- <?php if (isset($_SESSION['inputsHaveContent'])) : ?>
          
                      <?php if ($_SESSION['inputsHaveContent'] == false) : ?>

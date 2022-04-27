@@ -503,6 +503,24 @@ header {
    justify-content: center;
    margin: 2rem;
 
+   p {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+   }
+
+   table {
+      tr {
+         td {
+            &:first-child {
+               vertical-align: top;
+               text-align: left;
+               padding-right: 2.5rem;
+            }
+         }
+      }
+   }
+
    form {
       display: flex;
       justify-content: center;
@@ -519,6 +537,16 @@ header {
       width: 100%;
       padding: 0.3rem;
       margin-bottom: 1rem;
+      
+      &:hover {
+         outline: none;
+         border: 2px solid $button-hover-blue;
+      }
+
+      &:focus {
+         outline: none;
+         border: 2px solid $button-hover-blue;
+      }
    }
 
    textarea {
@@ -526,10 +554,20 @@ header {
       height: 140px;
       padding: 0.3rem;
       margin-bottom: 1rem;
+
+      &:hover {
+         outline: none;
+         border: 2px solid $button-hover-blue;
+      }
+      
+      &:focus {
+         outline: none;
+         border: 2px solid $button-hover-blue;
+      }
    }
 
    button {
-      width: 100%;
+      width: 105%;
       height: 3rem;
       align-self: center;
       background-color: $button-grey-blue;

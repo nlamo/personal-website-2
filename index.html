@@ -29,7 +29,7 @@
             </button>
          </div>
          <ul>
-            <li><a @click="scrollToElement('images-section')">Images</a></li>
+            <li><a @click="scrollToElement('top-section')">Top</a></li>
             <li><a @click="scrollToElement('overview-section')">Overview</a></li>
             <li><a @click="scrollToElement('projects-section')">Projects</a></li>
             <li><a @click="scrollToElement('concern-section')">Concern</a></li>
@@ -40,10 +40,12 @@
 
       <!-- Main content -->
       <main v-bind:class="{ backgroundLightBlue: lightMode, backgroundBlue: darkMode }">
-         <header v-bind:class="{ headerDark: darkMode }">
-            <h3 class="animated-header-text">Nicholas LaMothe</h3>
-            <h6>web developer, etc.</h6>
-         </header>
+         <div id="top-section">
+            <header v-bind:class="{ headerDark: darkMode }">
+               <h3 class="animated-header-text">Nicholas LaMothe</h3>
+               <h6>web developer, etc.</h6>
+            </header>
+         </div>
 
          <div id="images-section">
             <section class="images" v-bind:class="{ sectionDark: darkMode, imgBackgroundDark: darkMode }">
@@ -84,9 +86,7 @@
          <div id="overview-section-2">
             <section class="overview-2" v-bind:class="{ sectionDark: darkMode }">
                <p>
-                  Quick bio.<br><br>
-   
-                  I used to be a boxer, and I've been illustrating semi-regularly my entire life. Thankfully, I no longer
+                  Quick bio. I used to be a boxer, and I've been illustrating semi-regularly my entire life. Thankfully, I no longer
                   box. Not good for the <i>cerveau</i>. Instead, I mostly run.<br><br>
    
                   My background is originally in philosophy and English literature, with special interest in ethics, epistemology,

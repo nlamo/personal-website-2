@@ -183,7 +183,7 @@ header {
   justify-content: center;
   height: 5rem;
   padding: 3.5rem;
-  margin: 2rem 3rem 0rem 3rem;
+  margin: 0rem 3rem 0rem 3rem;
   font-weight: 900;
   font-size: 2rem;
   text-align: center;
@@ -333,6 +333,10 @@ header h6 {
   width: 100%;
   opacity: 1;
   transition: 0.7s;
+}
+
+#top-section {
+  padding-top: 2.5rem;
 }
 
 #images-section,

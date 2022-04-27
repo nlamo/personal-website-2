@@ -31,7 +31,7 @@ $dark-green: #344b47;
    justify-items: center;
    height: auto;
    padding: 3rem;
-   margin: 3rem;
+   margin: 0rem 3rem 0rem 3rem;
    border: 1px solid $black;
 }
 
@@ -45,7 +45,7 @@ $dark-green: #344b47;
    justify-items: center;
    height: auto;
    padding: 3rem;
-   margin: 3rem;
+   margin: 0rem 3rem 0rem 3rem;
    border: 1px solid $black;
 }
 
@@ -59,7 +59,7 @@ $dark-green: #344b47;
    justify-items: center;
    height: auto;
    padding: 3rem;
-   margin: 3rem;
+   margin: 0rem 3rem 0rem 3rem;
    border: 1px solid $black;
 }
 
@@ -81,7 +81,7 @@ $dark-green: #344b47;
    justify-items: center;
    height: auto;
    padding: 3rem;
-   margin: 3rem;
+   margin: 0rem 3rem 0rem 3rem;
    border: 1px solid $black;
 }
 
@@ -96,7 +96,7 @@ $dark-green: #344b47;
    a:link {
       color: $dark-green;
    }
-   
+
    a:visited {
       color: $dark-green;
    }
@@ -159,10 +159,12 @@ $dark-green: #344b47;
 }
 
 .imgBackgroundDark {
-   .div1, .div2, .div3 {
+   .div1,
+   .div2,
+   .div3 {
       background: $light-grey;
 
-      &__quote {        
+      &__quote {
          img {
             transition: 0s;
             background: $light-grey;
@@ -189,12 +191,11 @@ $dark-green: #344b47;
       &:link {
          color: $light-grey;
       }
-   
+
       &:visited {
          color: $light-grey;
       }
    }
-
 }
 
 .footerLight {
@@ -294,8 +295,7 @@ header {
    justify-content: center;
    height: 5rem;
    padding: 3.5rem;
-   margin: 2rem 3rem 3rem 3rem;
-   margin-bottom: 4rem;
+   margin: 2rem 3rem 0rem 3rem;
    font-weight: 900;
    font-size: 2rem;
    text-align: center;
@@ -304,7 +304,7 @@ header {
    h3 {
       font-size: 2.5rem;
    }
-   
+
    h6 {
       letter-spacing: 2px;
    }
@@ -316,11 +316,12 @@ header {
    --color-one: rgb(86, 136, 201);
    --color-two: rgb(152, 181, 185);
    background: linear-gradient(
-      90deg,
-      var(--color-one),
-      var(--color-two),
-      var(--color-one)
-   ) 0 0 / var(--bg-size) 100%;
+         90deg,
+         var(--color-one),
+         var(--color-two),
+         var(--color-one)
+      )
+      0 0 / var(--bg-size) 100%;
    animation: move-bg 20s infinite linear;
    -webkit-background-clip: text;
    background-clip: text;
@@ -398,7 +399,9 @@ header {
       margin: 0.5rem;
    }
 
-   .div1, .div2, .div3 {
+   .div1,
+   .div2,
+   .div3 {
       position: relative;
       aspect-ratio: 1 / 1;
       width: 80%;
@@ -409,7 +412,7 @@ header {
          object-fit: cover;
          width: 100%;
          opacity: 1;
-         transition: .5s;
+         transition: 0.5s;
       }
 
       &__quote {
@@ -422,32 +425,42 @@ header {
 
       &:hover {
          :not(p) {
-            opacity: .05;
-            transition: .5s;
+            opacity: 0.05;
+            transition: 0.5s;
          }
 
          .div1__quote {
             top: 30px;
             width: 100%;
             opacity: 1;
-            transition: .7s;
+            transition: 0.7s;
          }
 
          .div2__quote {
             top: 30px;
             width: 100%;
             opacity: 1;
-            transition: .7s;
+            transition: 0.7s;
          }
 
          .div3__quote {
             top: 30px;
             width: 100%;
             opacity: 1;
-            transition: .7s;
+            transition: 0.7s;
          }
       }
    }
+}
+
+#images-section,
+#overview-section,
+#overview-section-2,
+#projects-section,
+#concern-section,
+#optimism-section,
+#contact-section {
+   padding-top: 3rem;
 }
 
 .overview-1 {

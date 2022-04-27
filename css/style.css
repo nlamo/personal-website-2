@@ -53,10 +53,10 @@
 .navLight ul li a {
   background-color: #fff;
 }
-.navLight ul li a:link {
+.navLight ul li a :link {
   color: #000;
 }
-.navLight ul li a:visited {
+.navLight ul li a :visited {
   color: #000;
 }
 
@@ -223,7 +223,7 @@ header h6 {
   width: 100vw;
 }
 .grid-2-col .dark-mode {
-  margin-top: 2rem;
+  margin-top: 3rem;
 }
 .grid-2-col nav {
   display: grid;
@@ -235,8 +235,6 @@ header h6 {
   align-items: center;
   justify-items: center;
   border: 1px solid #000;
-  border-top: none;
-  border-bottom: none;
 }
 .grid-2-col nav ul {
   list-style: none;
@@ -248,7 +246,7 @@ header h6 {
 }
 .grid-2-col nav ul li a {
   display: block;
-  padding: 0.5rem 1rem;
+  padding: 0.3rem 1rem;
   text-decoration: none;
 }
 .grid-2-col nav ul li a :link {
@@ -256,6 +254,9 @@ header h6 {
 }
 .grid-2-col nav ul li a :visited {
   color: #000;
+}
+.grid-2-col nav ul li :hover {
+  color: #ff9966;
 }
 .grid-2-col main {
   overflow-y: scroll;

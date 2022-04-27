@@ -15,6 +15,7 @@ $white: #fff;
 $black: #000;
 $light-grey: #c5d4e0;
 $dark-green: #344b47;
+$pale-orange: #ff9966;
 
 /***************/
 /** UTILITIES **/
@@ -140,11 +141,11 @@ $dark-green: #344b47;
    ul li a {
       background-color: $white;
 
-      &:link {
+      :link {
          color: $black;
       }
 
-      &:visited {
+      :visited {
          color: $black;
       }
    }
@@ -347,7 +348,7 @@ header {
    width: 100vw;
 
    .dark-mode {
-      margin-top: 2rem;
+      margin-top: 3rem;
    }
 
    // Nevigation bar (left column)
@@ -358,8 +359,6 @@ header {
       align-items: center;
       justify-items: center;
       border: 1px solid $black;
-      border-top: none;
-      border-bottom: none;
 
       ul {
          list-style: none;
@@ -371,7 +370,7 @@ header {
 
             a {
                display: block;
-               padding: 0.5rem 1rem;
+               padding: 0.3rem 1rem;
                text-decoration: none;
 
                :link {
@@ -381,6 +380,10 @@ header {
                :visited {
                   color: $black;
                }
+            }
+
+            :hover {
+               color: $pale-orange;
             }
          }
       }

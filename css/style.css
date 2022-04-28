@@ -135,8 +135,8 @@
   background-color: #47586b;
 }
 .footerDark img {
-  background: white;
-  background: radial-gradient(circle, white 62%, #47586b 75%);
+  background: rgb(255, 255, 255);
+  background: radial-gradient(circle, rgb(255, 255, 255) 62%, rgb(71, 88, 107) 75%);
 }
 .footerDark img[src="img/github_logo.png"] {
   border-radius: 1rem;
@@ -442,6 +442,8 @@ header h6 {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  min-width: 40%;
+  max-width: 75%;
   margin: 2rem;
 }
 .form-container p {
@@ -458,7 +460,6 @@ header h6 {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  max-width: 40rem;
   font-size: 1rem;
 }
 .form-container label {

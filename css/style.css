@@ -1,3 +1,9 @@
+/***************/
+/** VARIABLES **/
+/***************/
+/***************/
+/** UTILITIES **/
+/***************/
 .highlight-selection-container {
   position: relative;
   z-index: 0;
@@ -20,38 +26,134 @@
   pointer-events: none;
 }
 
-header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 5rem;
-  padding: 3.5rem;
-  margin: 0rem 3rem 0rem 3rem;
-  font-weight: 900;
-  font-size: 2rem;
-  text-align: center;
-  border: 1px solid #000;
+/*****************/
+/** VUE CLASSES **/
+/*****************/
+.backgroundLightBlue {
+  background-color: #f0f8ff;
+}
+.backgroundLightBlue header,
+.backgroundLightBlue section,
+.backgroundLightBlue footer {
   background-color: #fff;
 }
-header h3 {
-  font-size: 2.5rem;
-}
-header h6 {
-  letter-spacing: 2px;
-}
-header .animated-header-text {
-  --bg-size: 400%;
-  --color-one: rgb(86, 136, 201);
-  --color-two: rgb(152, 181, 185);
-  background: linear-gradient(90deg, var(--color-one), var(--color-two), var(--color-one)) 0 0/var(--bg-size) 100%;
-  animation: move-bg 20s infinite linear;
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  font-weight: 900;
+
+.backgroundBlue {
+  background: radial-gradient(circle, #293849 48%, #192b3c 92%);
 }
 
+.headerDark {
+  background-color: #47586b;
+  color: #fff;
+}
+
+.navLight {
+  background-color: #fff;
+}
+.navLight ul li a {
+  background-color: #fff;
+}
+.navLight ul li a :link {
+  color: #000;
+}
+.navLight ul li a :visited {
+  color: #000;
+}
+
+.navDark {
+  background-color: #47586b;
+}
+.navDark ul li a {
+  background-color: #47586b;
+  color: #fff;
+}
+
+.imgBackgroundDark .div1,
+.imgBackgroundDark .div2,
+.imgBackgroundDark .div3 {
+  background: #c5d4e0;
+}
+.imgBackgroundDark .div1__quote img,
+.imgBackgroundDark .div2__quote img,
+.imgBackgroundDark .div3__quote img {
+  transition: 0s;
+  background: #c5d4e0;
+}
+.imgBackgroundDark .div1 p,
+.imgBackgroundDark .div2 p,
+.imgBackgroundDark .div3 p {
+  color: #344b47;
+  font-weight: 700;
+}
+
+.sectionDark {
+  background-color: #47586b;
+  color: #fff;
+}
+.sectionDark div {
+  background-color: #fff;
+  color: #000;
+}
+.sectionDark a:link {
+  color: #c5d4e0;
+}
+.sectionDark a:visited {
+  color: #c5d4e0;
+}
+
+.footerLight {
+  display: flex;
+  flex: 1 0 auto;
+  justify-content: center;
+  align-items: center;
+  overflow: auto;
+}
+.footerLight a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0px 10px 0px;
+}
+.footerLight a img {
+  width: 40%;
+}
+.footerLight a img[src="img/linkedin_logo.png"] {
+  border-radius: 3px;
+}
+.footerLight a img[src="img/linkedin_logo.png"]:hover {
+  filter: brightness(105%);
+  border-radius: 3px;
+}
+.footerLight a img[src="img/github_logo.png"] {
+  border-radius: 1rem;
+}
+.footerLight a img[src="img/github_logo.png"]:hover {
+  border-radius: 1rem;
+}
+
+.footerDark {
+  background-color: #47586b;
+}
+.footerDark img {
+  background: rgb(255, 255, 255);
+  background: radial-gradient(circle, rgb(255, 255, 255) 62%, rgb(71, 88, 107) 75%);
+}
+.footerDark img[src="img/github_logo.png"] {
+  border-radius: 1rem;
+}
+.footerDark img[src="img/github_logo.png"]:hover {
+  filter: opacity(0.85) brightness(110%);
+  border-radius: 1rem;
+}
+
+.formDark {
+  background-color: #47586b;
+  color: #fff;
+}
+
+/*****************/
+/* MAIN SECTIONS */
+/*****************/
 * {
   box-sizing: border-box;
   margin: 0;
@@ -74,18 +176,43 @@ body {
   overflow: hidden;
 }
 
-.backgroundLightBlue {
-  background-color: #f0f8ff;
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 5rem;
+  padding: 3.5rem;
+  margin: 0rem 3rem 0rem 3rem;
+  font-weight: 900;
+  font-size: 2rem;
+  text-align: center;
+  border: 1px solid #000;
 }
-.backgroundLightBlue section,
-.backgroundLightBlue footer {
-  background-color: #fff;
+header h3 {
+  font-size: 2.5rem;
+}
+header h6 {
+  letter-spacing: 2px;
 }
 
-.backgroundBlue {
-  background: radial-gradient(circle, #293849 48%, #192b3c 92%);
+.animated-header-text {
+  --bg-size: 400%;
+  --color-one: rgb(86, 136, 201);
+  --color-two: rgb(152, 181, 185);
+  background: linear-gradient(90deg, var(--color-one), var(--color-two), var(--color-one)) 0 0/var(--bg-size) 100%;
+  animation: move-bg 20s infinite linear;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-weight: 900;
 }
 
+@keyframes move-bg {
+  to {
+    background-position: var(--bg-size) 0;
+  }
+}
 .grid-2-col {
   display: grid;
   grid-template-columns: 0.12fr 1fr;
@@ -308,6 +435,9 @@ body {
   padding: 1rem;
 }
 
+/****************/
+/* CONTACT FORM */
+/****************/
 .form-container {
   display: flex;
   flex-direction: column;
@@ -383,49 +513,6 @@ footer {
   padding: 3rem;
   margin: 3rem;
   border: 1px solid #000;
-}
-footer.footerLight {
-  display: flex;
-  flex: 1 0 auto;
-  justify-content: center;
-  align-items: center;
-  overflow: auto;
-}
-footer.footerLight a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 10px 0px 10px 0px;
-}
-footer.footerLight a img {
-  width: 40%;
-}
-footer.footerLight a img[src="img/linkedin_logo.png"] {
-  border-radius: 3px;
-}
-footer.footerLight a img[src="img/linkedin_logo.png"]:hover {
-  filter: brightness(105%);
-  border-radius: 3px;
-}
-footer.footerLight a img[src="img/github_logo.png"] {
-  border-radius: 1rem;
-}
-footer.footerLight a img[src="img/github_logo.png"]:hover {
-  border-radius: 1rem;
-}
-footer.footerDark {
-  background-color: #47586b;
-}
-footer.footerDark img {
-  background: rgb(255, 255, 255);
-  background: radial-gradient(circle, rgb(255, 255, 255) 62%, rgb(71, 88, 107) 75%);
-}
-footer.footerDark img[src="img/github_logo.png"] {
-  border-radius: 1rem;
-}
-footer.footerDark img[src="img/github_logo.png"]:hover {
-  filter: opacity(0.85) brightness(110%);
-  border-radius: 1rem;
 }
 
 /*# sourceMappingURL=style.css.map */

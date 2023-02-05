@@ -193,7 +193,7 @@
                </div>
             </section>
          </div>
-         <footer v-bind:class="{ footerLight: !darkMode, sectionDark: darkMode, footerDark: darkMode }">
+         <footer v-bind:class="{ footerLight: !sectionDark, sectionDark: darkMode, footerDark: darkMode }">
             <a href="https://www.linkedin.com/in/nicholas-lamothe/" target="_blank">
                <img src="img/linkedin_logo.png">
             </a>

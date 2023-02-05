@@ -24,6 +24,7 @@ body {
 .backgroundLightBlue {
    background-color: $background-light-blue;
 
+   header,
    section,
    footer {
       background-color: $white;
@@ -32,66 +33,7 @@ body {
 
 .backgroundBlue {
    background: radial-gradient(circle, $background-dark-blue-secondary 48%, $background-dark-blue 92%);
-}
 
-// Main parent content, two columns for the whole page
-.grid-2-col {
-   display: grid;
-   grid-template-columns: 0.12fr 1fr;
-   grid-template-rows: 1fr;
-   grid-column-gap: 0px;
-   grid-row-gap: 0px;
-   height: 100vh;
-   width: 100vw;
-
-   .dark-mode {
-      margin-top: 3rem;
-   }
-
-   // TODO: Refactor this into main.scss and nav.scss
-
-   // Nevigation bar (left column)
-   nav {
-      @include grid-3-row-1-column;
-
-      grid-template-rows: 0.1fr 1fr 0.1fr;
-      align-items: center;
-      justify-items: center;
-      border: 1px solid $black;
-
-      ul {
-         list-style: none;
-         line-height: 8vh;
-         font-size: 2vh;
-
-         li {
-            background-color: $white;
-
-            a {
-               display: block;
-               padding: 0.3rem 1rem;
-               text-decoration: none;
-
-               :link {
-                  color: $black;
-               }
-
-               :visited {
-                  color: $black;
-               }
-            }
-
-            :hover {
-               color: $pale-orange;
-            }
-         }
-      }
-   }
-
-   // Primary content (right column)
-   main {
-      overflow-y: scroll;
-   }
 }
 
 .images {

@@ -1,0 +1,66 @@
+footer {
+   display: grid;
+   align-items: center;
+   justify-items: center;
+   padding: 3rem;
+   margin: 3rem;
+   border: 1px solid $black;
+
+   &.footerLight {
+      display: flex;
+      flex: 1 0 auto;
+      justify-content: center;
+      align-items: center;
+      overflow: auto;
+   
+      a {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         padding: 10px 0px 10px 0px;
+   
+         img {
+            width: 40%;
+   
+            &[src='img/linkedin_logo.png'] {
+               border-radius: 3px;
+   
+               &:hover {
+                  filter: brightness(105%);
+                  border-radius: 3px;
+               }
+            }
+   
+            &[src='img/github_logo.png'] {
+               border-radius: 1rem;
+   
+               &:hover {
+                  border-radius: 1rem;
+               }
+            }
+         }
+      }
+   }
+   
+   &.footerDark {
+      background-color: $section-dark-blue;
+   
+      img {
+         background: rgb(255, 255, 255);
+         background: radial-gradient(
+            circle,
+            rgba(255, 255, 255, 1) 62%,
+            rgba(71, 88, 107, 1) 75%
+         );
+   
+         &[src='img/github_logo.png'] {
+            border-radius: 1rem;
+   
+            &:hover {
+               filter: opacity(0.85) brightness(110%);
+               border-radius: 1rem;
+            }
+         }
+      }
+   }
+}

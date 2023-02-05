@@ -5,7 +5,8 @@ const app = Vue.createApp({
          darkMode: false,
          buttonBackground: "#192b3c",
          buttonText: "Darken",
-         buttonTextColor: "#fff"
+         buttonTextColor: "#fff",
+         fingerSnap: new Audio('http://localhost/personal-website-2/sound/finger-snap.wav')
       };
    },
    methods: {
@@ -39,8 +40,7 @@ const app = Vue.createApp({
          }
       },
       playFingerSnap() {
-         let fingerSnap = new Audio('../sound/finger-snap.wav');
-         fingerSnap.play();
+         this.fingerSnap.play();
       }
    },
 });

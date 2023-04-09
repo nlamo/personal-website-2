@@ -1,0 +1,28 @@
+{
+  "blog-posts": [
+    {
+       "id": 1,
+       "author": "Nicholas LaMothe",
+       "title": "A thought for the moment", 
+       "content": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam error praesentium exercitationem tenetur. In inventore, molestiae enim, sed dignissimos dolore veniam nobis nemo illo dicta alias. Natus nisi aperiam sit!"
+   },
+   {
+      "id": 2,
+      "author": "Nicholas LaMothe",
+      "title": "A second post", 
+      "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus perferendis omnis repudiandae suscipit, harum ex?"
+   },
+   {
+      "id": 3,
+      "author": "Nicholas LaMothe",
+      "title": "There is more to come", 
+      "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae architecto corrupti cum consequuntur, consequatur animi dignissimos, accusantium eius sint at explicabo tenetur repellendus neque magni eligendi. Ex, facilis error id corrupti minus consequuntur aut harum inventore ipsam magni earum rem."
+   },
+   {
+      "id": 4,
+      "author": "Nicholas LaMothe",
+      "title": "Waiting for the singularity", 
+      "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, autem."
+   }
+  ]
+}

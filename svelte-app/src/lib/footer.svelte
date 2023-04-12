@@ -6,7 +6,7 @@
    <div class="copy">&copy; Nicholas LaMothe</div>
 </footer>
 
-<style lang="scss">
+<style lang="scss" global>
    .footer {
       display: flex;
       position: relative;

@@ -15,7 +15,7 @@
    </p>
 </li>
 
-<style lang="scss">
+<style lang="scss" global>
    .blog-entry {
       display: flex;
       flex-direction: column;

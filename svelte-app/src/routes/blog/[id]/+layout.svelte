@@ -1,18 +1,11 @@
 <script>
-   export let data
+   // export let data
 
-   $: blogPost = data.singleBlogPost
+   // $: blogPost = data.singleBlogPost
 </script>
 
-<div class="blog-page-container">
-   <h2>{blogPost.title}</h2>
-   <p>{blogPost.content}</p>
-</div>
+<slot/>
 
 <style>
-   .blog-page-container {
-      background: rgb(47, 79, 79, 0.2);
-      border: 1px dotted orange;
-      padding: 2rem;
-   }
+
 </style>

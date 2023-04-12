@@ -22,7 +22,7 @@
    </h1>
 </header>
 
-<style lang="scss">
+<style lang="scss" global>
    .header {
       display: flex;
       flex-direction: column;

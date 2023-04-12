@@ -20,7 +20,7 @@
    <!-- Getting our data from +page.ts -->
    <div class="change-title">
       <label for="">Change title:&nbsp;</label>
-      <input type="text" bind:value={data.pageTitle} />
+      <input type="text" bind:value={data.changeTitleInput} />
    </div>
    
    <div class="links">
@@ -34,7 +34,7 @@
    </div>
 </div>
 
-<style lang="scss">
+<style lang="scss" global>
    .content {
       display: flex;
       flex-direction: column;

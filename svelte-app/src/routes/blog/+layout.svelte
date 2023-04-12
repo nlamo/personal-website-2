@@ -6,7 +6,6 @@
  -->
  
 <script>
-   import '../../styles/global.css'
    import Header from '$lib/header.svelte'
 </script>
 
@@ -17,7 +16,7 @@
    <slot></slot>
 </main>
 
-<style lang="scss">
+<style lang="scss" global>
    .blog-container {
       display: flex;
       flex-direction: column;

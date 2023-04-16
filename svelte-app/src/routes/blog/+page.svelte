@@ -1,7 +1,6 @@
 <script>
    import BlogEntry from '$lib/blog-entry.svelte'
 
-   // NOTE: This gets all of the data? The one prop to rule them all?
    export let data
 
    $: blogPosts = data.blogPosts
@@ -26,16 +25,12 @@
    {/each}
 </ul>
 
-<style lang="scss">
+<style lang="scss" global>
    .intro {
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
       align-items: flex-start;
-
-      a {
-         color: orange;
-      }
    }
 
    .blog-posts {

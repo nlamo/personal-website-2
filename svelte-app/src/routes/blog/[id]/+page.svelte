@@ -7,6 +7,12 @@
 <div class="blog-page-container">
    <h2>{blogPost.title}</h2>
    <p>{blogPost.content}</p>
+
+   {#if blogPost.code}
+      <div class="code-block">
+         {blogPost.code}
+      </div>
+   {/if}
 </div>
 <div class="go-back">
    <p>
@@ -19,6 +25,14 @@
       background: rgb(47, 79, 79, 0.2);
       border: 1px dotted orange;
       padding: 2rem;
+   }
+
+   .code-block {
+      padding: 2rem;
+      font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      background:rgb(47, 79, 79, 0.6);
+      border: 1px solid grey;
+      border-radius: 3px;
    }
 
    .go-back {

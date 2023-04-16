@@ -14,15 +14,12 @@
    </p>
 </div>
 
-<style lang="scss">
+<style lang="scss" global>
    .content {
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
       align-items: flex-start;
-
-      a {
-         color: orange;
-      }
+      margin: 3rem;
    }
 </style>

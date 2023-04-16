@@ -1,7 +1,6 @@
 <script>
-   // export let data
+   export let data
 
-   // $: blogPost = data.singleBlogPost
 </script>
 
 <slot/>

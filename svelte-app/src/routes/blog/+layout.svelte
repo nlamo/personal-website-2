@@ -1,15 +1,6 @@
-<!-- 
-   This is for fun - basically part of the original parent layout
-   is being nested within this layout. 
-
-   This will change, likely.
- -->
- 
 <script>
    import Header from '$lib/header.svelte'
 </script>
-
-<Header title="Entries" />
 
 <main class="blog-container">
    <!-- page content -->
@@ -17,11 +8,18 @@
 </main>
 
 <style lang="scss" global>
+   .main-container {
+      // Nested header 
+      .header {
+         margin: 3rem 3rem 0 3rem;
+      }
+   }
+
    .blog-container {
       display: flex;
       flex-direction: column;
       min-height: 80vh;
-      margin: 2rem 2rem 0 2rem;
+      margin: 3rem;
       
       color: white;
    }

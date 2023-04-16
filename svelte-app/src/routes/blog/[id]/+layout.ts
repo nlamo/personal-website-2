@@ -7,7 +7,7 @@
       // NOTE: Add exception handling
       if (res.ok) {
          return {
-            singleBlogPost: singleBlogPost,
+            singleBlogPost: singleBlogPost
          };
       }
    }

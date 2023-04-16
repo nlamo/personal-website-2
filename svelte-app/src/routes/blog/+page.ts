@@ -7,7 +7,7 @@ export async function load({ fetch }) {
 
    const res = await fetch('http://localhost:3000/blog-posts')
    const blogPosts = await res.json()
-   
+
    // NOTE: Add exception handling
    if (res.ok) {
       return {

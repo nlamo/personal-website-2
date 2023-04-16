@@ -2,6 +2,7 @@
    export let id = 0;
    export let title = "Title Placeholder"
    export let content = "Content Placeholder"
+   export let code = ""
 </script>
 
 <li class={`blog-entry ${id}`}>

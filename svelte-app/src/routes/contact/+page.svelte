@@ -4,7 +4,7 @@
 
 <div class="content">
    <p>
-      Thisw is going to be a contact page, ideally where you will get a hold of me if anything comes to mind.
+      This is going to be a contact page, ideally where you will get a hold of me if anything comes to mind.
    </p>
 </div>
 

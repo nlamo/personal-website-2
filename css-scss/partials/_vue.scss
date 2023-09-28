@@ -1,0 +1,209 @@
+/***************/
+/* VUE CLASSES */
+/***************/
+
+.button {
+	border: 3px solid $light-grey;
+	box-shadow: 0 5px 15px rgb(0 0 0 / 0.2);
+}
+
+.buttonLight {
+   padding: 0.5rem;
+   border-radius: 50%;
+   background-color: $button-grey-blue;
+	box-shadow: 0 5px 15px rgb(0 0 0 / 0.2);
+   
+   .circle {
+      width: 50px;
+      height: 50px;
+      border: 2px solid $white;
+      border-radius: 50%;
+      background-color: $background-dark-blue-secondary;
+      filter: opacity(0.7);
+   }
+}
+
+.buttonDark {
+   padding: 0.5rem;
+   border-radius: 50%;
+   background-color: $background-light-blue;
+
+   .circle {
+      width: 50px;
+      height: 50px;
+      border: 1px solid $section-dark-blue;
+      border-radius: 50%;
+      background-color: $light-grey;
+      filter: opacity(0.6);
+   }
+}
+
+
+.backgroundLightBlue {
+   background-color: $background-light-blue;
+
+   header,
+   section,
+   footer {
+      background-color: $white;
+   }
+}
+
+// Variation on .animated-header-text
+.animated-button-background {
+   --bg-size: 400%;
+   --color-one: rgb(32, 70, 102);
+   --color-two: rgb(51, 110, 117);
+   background: linear-gradient(
+         90deg,
+         var(--color-one),
+         var(--color-two),
+         var(--color-one)
+      )
+      0 0 / var(--bg-size) 100%;
+   animation: move-bg 15s infinite linear;
+   color: transparent;
+   font-weight: 900;
+}
+
+.backgroundBlue {
+   background: radial-gradient(circle, $background-dark-blue-secondary 48%, $background-dark-blue 92%);
+}
+
+.headerDark {
+   background-color: $section-dark-blue;
+   color: $white;
+}
+
+.navLight {
+   background-color: $white;
+   border-right: 1px solid $black;
+
+   ul li a {
+      background-color: $white;
+
+      :link {
+         color: $black;
+      }
+
+      :visited {
+         color: $black;
+      }
+   }
+}
+
+.navDark {
+   background-color: $section-dark-blue;
+
+   ul li a {
+      background-color: $section-dark-blue;
+      color: $white;
+   }
+}
+
+.imgBackgroundDark {
+   .div1,
+   .div2,
+   .div3 {
+      background: $light-grey;
+
+      &__quote {
+         img {
+            transition: 0s;
+            background: $light-grey;
+         }
+      }
+
+      p {
+         color: $dark-green;
+         font-weight: 700;
+      }
+   }
+}
+
+.sectionDark {
+   background-color: $section-dark-blue;
+   color: $white;
+
+   div {
+      color: $white;
+   }
+
+   a {
+      &:link {
+         color: $light-grey;
+      }
+
+      &:visited {
+         color: $light-grey;
+      }
+   }
+
+   .button-submit {
+      background-color: $white !important;
+      color: $section-dark-blue !important;
+   }
+}
+
+.footerLight {
+   display: flex;
+   flex: 1 0 auto;
+   justify-content: center;
+   align-items: center;
+   overflow: auto;
+
+   a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px 0px 10px 0px;
+
+      img {
+         width: 40%;
+
+         &[src='img/linkedin_logo.png'] {
+            border-radius: 3px;
+
+            &:hover {
+               filter: brightness(105%);
+               border-radius: 3px;
+            }
+         }
+
+         &[src='img/github_logo.png'] {
+            border-radius: 1rem;
+
+            &:hover {
+               border-radius: 1rem;
+            }
+         }
+      }
+   }
+}
+
+.footerDark {
+   background-color: $section-dark-blue;
+
+   img {
+      background: rgb(255, 255, 255);
+      background: radial-gradient(
+         circle,
+         rgba(255, 255, 255, 1) 62%,
+         rgba(71, 88, 107, 1) 75%
+      );
+
+      &[src='img/github_logo.png'] {
+         border-radius: 1rem;
+
+         &:hover {
+            filter: opacity(0.85) brightness(110%);
+            border-radius: 1rem;
+         }
+      }
+   }
+}
+
+.formDark {
+   background-color: $section-dark-blue;
+   color: $white;
+}

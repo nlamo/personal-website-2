@@ -1,0 +1,94 @@
+/****************/
+/* CONTACT FORM */
+/****************/
+
+.form-container {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   margin: 0 2rem 4rem 2rem;
+   min-width: 40vw;
+
+   form {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      font-size: 1rem;
+   }
+
+   .opener {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 2.5rem;
+   }
+
+   .form-inner {
+      display: flex;
+      flex-direction: row;
+      gap: 2.5rem;
+
+      .name {
+         flex-basis: 25%;
+         flex-shrink: 0;
+         letter-spacing: 0.25rem;
+         font-weight: 700;
+      }
+
+      .content {
+         flex: 1 1 100%;
+
+         input,
+         textarea {
+            font-size: 0.9rem;
+         }
+      }
+
+      .question {
+         display: block;
+
+         .question-inner {
+            display: block;
+            height: max-content;
+            margin-bottom: 1rem;
+         }
+      }
+   }
+
+   .button-submit {
+      cursor: pointer;
+      width: 100%;
+      height: 3rem;
+      align-self: center;
+      margin: 1rem 0;
+      font-family: 'Pathway Extreme', sans-serif;
+      font-weight: 700;
+      font-size: 1.25rem;
+      background: $section-dark-blue;
+      border-radius: 3px;
+      border-color: $button-hover-blue;
+      color: $white;
+
+      &:hover {
+         filter: opacity(0.9);
+      }
+   }
+
+   label {
+      margin-bottom: 1rem;
+   }
+
+   input {
+      width: 100%;
+      padding: 0.3rem;
+      margin-bottom: 1rem;
+      font-family: 'Pathway Extreme', sans-serif;
+   }
+
+   textarea {
+      width: 100%;
+      height: 140px;
+      padding: 0.3rem;
+      margin-bottom: 1rem;
+      font-family: 'Pathway Extreme', sans-serif;
+   }
+}

@@ -1,0 +1,256 @@
+/********/
+/* BASE */
+/********/
+
+* {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+   font-family: 'Karla', sans-serif;
+}
+
+html {
+   font-size: 20px;   
+}
+
+a {
+   cursor: pointer;
+}
+
+button {
+   cursor: pointer;
+   padding: 10px;
+   font-size: 2vh;
+   color: $white;
+}
+
+// Entire body overflow is hidden, we set the scroll for the content with 'overflow-y'
+body {
+   overflow: hidden;
+}
+
+
+#top-section {
+   padding-top: 2.5rem;
+
+
+	header {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		height: 5rem;
+		padding: 4rem;
+		margin: 0rem 3rem 0rem 3rem;
+		font-weight: 900;
+		font-size: 2rem;
+		text-align: center;
+		border: 1px solid $black;
+		box-shadow: 0 5px 15px rgb(0 0 0 / 0.6);
+	
+		h6 {
+			letter-spacing: 2px;
+		}
+	}
+}
+
+// Really nice! Attribution: https://codepen.io/jh3y/pen/YzYgMra, thanks @jh3y
+.animated-header-text {
+   --bg-size: 400%;
+   --color-one: rgb(86, 136, 201);
+   --color-two: rgb(152, 181, 185);
+   background: linear-gradient(
+         90deg,
+         var(--color-one),
+         var(--color-two),
+         var(--color-one)
+      )
+      0 0 / var(--bg-size) 100%;
+   animation: move-bg 20s infinite linear;
+   -webkit-background-clip: text;
+   background-clip: text;
+   color: transparent;
+   font-weight: 900;
+}
+
+@keyframes move-bg {
+   to {
+      background-position: var(--bg-size) 0;
+   }
+}
+
+// Main parent content, two columns for the whole page
+.grid-2-col {
+   display: grid;
+   grid-template-columns: 0.12fr 1fr;
+   grid-template-rows: 1fr;
+   grid-column-gap: 0px;
+   grid-row-gap: 0px;
+   height: 100vh;
+   width: 100vw;
+
+   .dark-mode {
+      margin-top: 3rem;
+   }
+
+   // Nevigation bar (left column)
+   nav {
+      @include grid-3-row-1-column;
+
+      grid-template-rows: 0.1fr 1fr 0.1fr;
+      align-items: center;
+      justify-items: center;
+      width: 17.5vw;
+
+      .nav-list {
+         list-style: none;
+         line-height: 8vh;
+         font-size: 1.1vw;
+
+         li {
+            background-color: $white;
+
+            a {
+               display: block;
+               padding: 0.3rem 1rem;
+               text-decoration: none;
+
+               :link {
+                  color: $black;
+               }
+
+               :visited {
+                  color: $black;
+               }
+            }
+
+            :hover {
+               color: $pale-orange;
+            }
+         }
+      }
+   }
+
+   // Primary content (right column)
+   main {
+      overflow-y: scroll;
+   }
+}
+
+.images {
+   @include grid-3-col-1-row;
+
+   * {
+      padding: 1rem;
+      margin: 0.5rem;
+   }
+
+   .div1,
+   .div2,
+   .div3 {
+      position: relative;
+      aspect-ratio: 1 / 1;
+      width: 80%;
+      text-align: center;
+      border: 1px solid $black;
+
+      img {
+         object-fit: cover;
+         width: 100%;
+         opacity: 1;
+         transition: 0.5s;
+      }
+
+      &__quote {
+         position: absolute;
+         display: flex;
+         inset: 0;
+         opacity: 0;
+         padding-right: 1.8rem;
+         font-size: 1vw;
+      }
+
+      &:hover {
+         :not(p) {
+            opacity: 0.05;
+            transition: 0.5s;
+         }
+
+         .div1__quote {
+            top: 30px;
+            width: 100%;
+            opacity: 1;
+            transition: 0.7s;
+         }
+
+         .div2__quote {
+            top: 30px;
+            width: 100%;
+            opacity: 1;
+            transition: 0.7s;
+         }
+
+         .div3__quote {
+            top: 30px;
+            width: 100%;
+            opacity: 1;
+            transition: 0.7s;
+         }
+      }
+   }
+}
+
+.section-container {
+	padding-top: 3rem;
+	
+	section {
+      border: 1px solid $black;
+		box-shadow: 0 5px 15px rgb(0 0 0 / 0.6);
+
+      h3 {
+         font-size: 2rem;
+         margin-bottom: 1.5rem;
+      }
+	}
+}
+
+.overview-1 {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   padding: 3rem;
+   margin: 0rem 3rem 0rem 3rem;
+
+   .text-container {
+      display: flex;
+      flex-basis: 1/3;
+
+      p {
+         margin: 0 1rem 1rem 1rem;
+      }
+   }
+
+}
+
+.overview-2,
+.projects,
+.thoughts,
+.contact {
+   @include grid-single;
+}
+
+.contact {
+   padding: 3rem;
+   margin: 0rem 3rem 0rem 3rem;
+}
+
+footer {
+   display: grid;
+   align-items: center;
+   justify-items: center;
+   padding: 3rem;
+   margin: 3rem;
+   border: 1px solid $black;
+	box-shadow: 0 5px 15px rgb(0 0 0 / 0.8);
+}

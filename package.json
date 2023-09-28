@@ -1,0 +1,19 @@
+{
+  "name": "portfolio-site-2",
+  "version": "1.0.0",
+  "description": "My second personal website.",
+  "main": "app.js",
+  "scripts": {
+    "build": "sass css-scss/style.scss css/style.css",
+    "watch": "sass css-scss/style.scss css/style.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nlamo/personal-website-2.git"
+  },
+  "author": "Nicholas LaMothe",
+  "bugs": {
+    "url": "https://github.com/nlamo/personal-website-2/issues"
+  },
+  "homepage": "https://github.com/nlamo/personal-website-2#readme"
+}

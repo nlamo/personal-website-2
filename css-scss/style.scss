@@ -1,0 +1,8 @@
+// TODO: Migrate to using @use rule, which requires use of 'Dart Sass'
+//       See: https://sass-lang.com/documentation/at-rules/import/
+
+@import 'partials/variables';
+@import 'partials/utilities';
+@import 'partials/base';
+@import 'partials/vue';
+@import 'partials/contact';

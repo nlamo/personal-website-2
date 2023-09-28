@@ -1,8 +1,9 @@
 <?php
 
-class SubmissionSuccess {
-
-	function __construct($text) {
+class SubmissionStatus
+{
+	function __construct($success, $text)
+	{
 		printf(
 			<<<'HTML'
 				<div class="overlay">
@@ -14,13 +15,14 @@ class SubmissionSuccess {
 						</div>
 						<div @click="removeSubmissionCard" class="understood">
 							<p>
-								Excellent!
+								%2$s
 							</p>
 						</div>
 					</div>
 				</div>
 			HTML
-			, htmlspecialchars($text)
+			, $text
+			, $success ? "Excellent!" : "Got it!"
 		);
 	}
 }

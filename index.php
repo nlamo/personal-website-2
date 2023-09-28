@@ -79,7 +79,7 @@
          </div>
          <div id="overview-section" class="section-container">
             <section class="overview-1" v-bind:class="{ sectionDark: darkMode }">
-               <h3 title="Name of the developer." class="animated-header-text">Overview</h3>
+               <h3 class="animated-header-text">Overview</h3>
                <div class="text-container">
                   <p>
                      Greetings! My name is Nicholas, and I am a web developer. I work in any number of languages or frameworks, contingent upon the shifting sands of time - or the needs of the employer.
@@ -113,7 +113,7 @@
          </div>
          <div id="projects-section" class="section-container">
             <section class="projects" v-bind:class="{ sectionDark: darkMode }">
-               <h3 title="Name of the developer." class="animated-header-text">Projects</h3>
+               <h3 class="animated-header-text">Projects</h3>
                <p>
                   Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis aliquid nesciunt eius laboriosam voluptate tenetur sit non amet asperiores ex quos eligendi nisi facere voluptatibus, quidem culpa exercitationem, quasi nobis in! Et dolore quis aliquid quod tempore reiciendis non? Vero!
                </p>
@@ -121,7 +121,7 @@
          </div>
          <div id="thoughts-section" class="section-container">
             <section class="thoughts" v-bind:class="{ sectionDark: darkMode }">
-               <h3 title="Name of the developer." class="animated-header-text">Thoughts</h3>
+               <h3 class="animated-header-text">Thoughts</h3>
                <p>
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga dolores debitis laboriosam dolorum similique reiciendis deserunt voluptates incidunt adipisci, quidem est sed voluptatem provident exercitationem suscipit quod non. Aut, recusandae deleniti? Corporis maxime asperiores, itaque adipisci repudiandae quis hic quaerat?
                </p>
@@ -130,7 +130,7 @@
 
          <div id="contact-section" class="section-container">
             <section class="contact" v-bind:class="{ sectionDark: darkMode }">
-               <h3 title="Name of the developer." class="animated-header-text">Contact</h3>
+               <h3 class="animated-header-text">Contact</h3>
                <div class="form-container">
                   <form v-bind:class="{ formDark: darkMode }" method="POST" action="<?php echo $_SERVER['PHP_SELF']?>">
                      <p class="opener"><b>Got a question, consideration, or curiosity? Feel free to reach out.</b></p><br>

@@ -105,7 +105,7 @@
                   Recreationally, I like to spend my time enagaged with film, literature, illustration, music, gaming, and cycling.<br><br><br>
 
                   <span class="highlight-selection-container">
-                     You can find my resume <a href="cv/nicholas-lamothe-cv.pdf" target=”_blank”>here</a>.
+                     You can find my resume <a href="resume/nicholas-lamothe-resume.pdf" target=”_blank”>here</a>.
                      <img class="highlight-selection" src="./img/highlight-selection.png" alt="">
                   </span>
                </p>

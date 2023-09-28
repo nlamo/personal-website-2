@@ -1,7 +1,5 @@
 <?php
 
-require "question.php";
-
 $questions = (new Question())->getQuestions();
 
 if (filter_has_var(INPUT_POST, 'submit')) {

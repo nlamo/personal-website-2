@@ -10,6 +10,7 @@
    require "lib/sections/projects.php";
    require "lib/sections/thoughts.php";
 
+   require "lib/form/question.php";
    require "lib/form/contact-form.php";
    require "lib/form/contact-logic.php";
    require "lib/form/submission-failure.php";

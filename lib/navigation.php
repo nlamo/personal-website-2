@@ -12,13 +12,13 @@ class Navigation
 							title="Toggle between dark mode and light mode."
 							class="button"
 							v-bind:class="{ buttonLight: lightMode, buttonDark: darkMode }"
-							@click="playFingerSnap(); setButtonClass(); toggleDarkMode();"
+							@click="playFingerSnap(); toggleDarkMode();"
 						>
 							<div class="circle animated-button-background"></div>
 						</button>
 					</div>
 					<ul class="nav-list">
-						<li><a @click="scrollToElement('top-section')">Top</a></li>
+						<li><a @click="scrollToElement('header-section')">Top</a></li>
 						<li><a @click="scrollToElement('overview-section')">Overview</a></li>
 						<li><a @click="scrollToElement('projects-section')">Projects</a></li>
 						<li><a @click="scrollToElement('thoughts-section')">Thoughts</a></li>
